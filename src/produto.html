@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Profissional - Syrah & Seogo</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header (mesmo do index.html) -->
+    <header class="header">
+      <div class="nav-container">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="assets/logo.png" alt="Syrah Logo" class="logo" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Início</a>
+          <a href="#precos" class="nav-link">Preços</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#contato" class="nav-link">Contato</a>
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="product-hero">
+      <div class="product-hero-content">
+        <h1>Transformação Digital Completa</h1>
+        <p>Desenvolvimento, Marketing e Performance em um só lugar</p>
+      </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="about-section dark-section">
+      <div class="section-header">
+        <h2>Quem <span class="highlight">Somos</span></h2>
+        <p>Uma agência completa para o seu sucesso digital</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead-text">
+              Somos uma agência full-service que combina expertise em
+              desenvolvimento web, marketing digital e otimização de performance
+              para criar soluções digitais que realmente geram resultados.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Anos de Experiência</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Projetos Entregues</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Clientes Satisfeitos</span>
+              </div>
+            </div>
+          </div>
+          <div class="expertise-grid">
+            <div class="expertise-card">
+              <i class="fas fa-code"></i>
+              <h3>Desenvolvimento Web</h3>
+              <p>
+                Sites e aplicações web de alta performance com as tecnologias
+                mais modernas do mercado
+              </p>
+            </div>
+            <div class="expertise-card">
+              <i class="fas fa-search"></i>
+              <h3>SEO Avançado</h3>
+              <p>
+                Especialistas em otimização para o Google, garantindo as
+                melhores posições nas buscas
+              </p>
+            </div>
+            <div class="expertise-card">
+              <i class="fas fa-chart-line"></i>
+              <h3>Marketing Digital</h3>
+              <p>
+                Estratégias completas de marketing digital para maximizar seu
+                ROI
+              </p>
+            </div>
+            <div class="expertise-card">
+              <i class="fas fa-tachometer-alt"></i>
+              <h3>Performance</h3>
+              <p>
+                Sites ultra rápidos e otimizados para a melhor experiência do
+                usuário
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <h3>Por que nos escolher?</h3>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i> Equipe especializada em
+                desenvolvimento e marketing
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Metodologia ágil e
+                resultados rápidos
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Foco em ROI e métricas
+                claras
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Suporte técnico
+                especializado
+              </li>
+              <li><i class="fas fa-check-circle"></i> Tecnologias de ponta</li>
+              <li>
+                <i class="fas fa-check-circle"></i> Estratégias personalizadas
+              </li>
+            </ul>
+          </div>
+          <div class="highlight-card">
+            <h3>Nosso Diferencial</h3>
+            <ul>
+              <li>
+                <i class="fas fa-star"></i> Expertise em SEO e Performance
+              </li>
+              <li><i class="fas fa-star"></i> Desenvolvimento Full Stack</li>
+              <li><i class="fas fa-star"></i> Marketing Data-Driven</li>
+              <li><i class="fas fa-star"></i> Design UX/UI Premium</li>
+              <li><i class="fas fa-star"></i> Automação de Processos</li>
+              <li><i class="fas fa-star"></i> Integração Completa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+      <div class="section-header">
+        <h2>Planos <span class="highlight">Disponíveis</span></h2>
+        <p>Escolha o plano ideal para o seu negócio</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Básico</h3>
+            <div class="price">
+              <span class="amount">R$ 2.997</span>
+              <span class="period">Pagamento único</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Site Responsivo</li>
+            <li><i class="fas fa-check"></i> SEO Básico</li>
+            <li><i class="fas fa-check"></i> 5 Páginas</li>
+            <li><i class="fas fa-check"></i> Integração WhatsApp</li>
+            <li><i class="fas fa-check"></i> Suporte por 30 dias</li>
+          </ul>
+          <a href="#" class="btn-neon">Começar Agora</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <span class="featured-tag">Mais Popular</span>
+          <div class="pricing-header">
+            <h3>Profissional</h3>
+            <div class="price">
+              <span class="amount">R$ 4.997</span>
+              <span class="period">Pagamento único</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Tudo do Plano Básico</li>
+            <li><i class="fas fa-check"></i> SEO Avançado pela Seogo</li>
+            <li><i class="fas fa-check"></i> 10 Páginas</li>
+            <li><i class="fas fa-check"></i> Blog Otimizado</li>
+            <li><i class="fas fa-check"></i> Painel Administrativo</li>
+            <li><i class="fas fa-check"></i> Suporte por 90 dias</li>
+          </ul>
+          <a href="#" class="btn-neon">Escolher Plano</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Enterprise</h3>
+            <div class="price">
+              <span class="amount">Sob Consulta</span>
+              <span class="period">Personalizado</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Tudo do Plano Profissional</li>
+            <li><i class="fas fa-check"></i> SEO Premium pela Seogo</li>
+            <li><i class="fas fa-check"></i> Páginas Ilimitadas</li>
+            <li><i class="fas fa-check"></i> Integrações Personalizadas</li>
+            <li><i class="fas fa-check"></i> Suporte Prioritário</li>
+            <li><i class="fas fa-check"></i> Consultoria Mensal</li>
+          </ul>
+          <a href="#" class="btn-neon">Falar com Consultor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>Recursos e Funcionalidades</h2>
+        <p>Descubra tudo que seu site terá</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Design Responsivo</h3>
+          <p>Seu site perfeito em qualquer dispositivo</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Modo Claro/Escuro</h3>
+          <p>Experiência personalizada para cada usuário</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-search"></i>
+          <h3>SEO Otimizado</h3>
+          <p>Melhor ranqueamento no Google</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-bolt"></i>
+          <h3>Performance</h3>
+          <p>Carregamento ultrarrápido</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Segurança</h3>
+          <p>Proteção contra ameaças</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-sync"></i>
+          <h3>Atualizações</h3>
+          <p>Manutenção e melhorias constantes</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços Adicionais -->
+    <section class="additional-services">
+      <div class="section-header">
+        <h2>Serviços <span class="highlight">Adicionais</span></h2>
+        <p>
+          Maximize o potencial do seu site com nossos serviços complementares
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-box">
+          <i class="fas fa-chart-line"></i>
+          <h3>Consultoria SEO Mensal</h3>
+          <p>
+            Acompanhamento contínuo do desempenho do seu site nos mecanismos de
+            busca
+          </p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Análise de Keywords</li>
+            <li><i class="fas fa-check"></i> Otimização de Conteúdo</li>
+            <li><i class="fas fa-check"></i> Relatórios Mensais</li>
+          </ul>
+        </div>
+
+        <div class="service-box">
+          <i class="fas fa-pen-fancy"></i>
+          <h3>Produção de Conteúdo</h3>
+          <p>Conteúdo otimizado para SEO e engajamento do público</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Posts para Blog</li>
+            <li><i class="fas fa-check"></i> Artigos Técnicos</li>
+            <li><i class="fas fa-check"></i> Copywriting</li>
+          </ul>
+        </div>
+
+        <div class="service-box">
+          <i class="fas fa-tools"></i>
+          <h3>Manutenção Mensal</h3>
+          <p>Mantenha seu site sempre atualizado e funcionando perfeitamente</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Atualizações de Segurança</li>
+            <li><i class="fas fa-check"></i> Backup Diário</li>
+            <li><i class="fas fa-check"></i> Suporte Técnico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnership Benefits -->
+    <section class="partnership-benefits">
+      <div class="section-header">
+        <h2>Benefícios da <span class="highlight">Parceria</span></h2>
+        <p>Ao escolher nosso serviço, você conta com a expertise da Seogo</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <i class="fas fa-search"></i>
+          <h3>Expertise em SEO</h3>
+          <p>
+            Beneficie-se da experiência da Seogo em posicionamento no Google e
+            aumente sua visibilidade online
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Crescimento Contínuo</h3>
+          <p>
+            Suporte contínuo para evolução do seu site e estratégias de
+            marketing digital
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Resultados Mensuráveis</h3>
+          <p>
+            Acompanhe o desempenho do seu site com relatórios detalhados e
+            métricas claras
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <i class="fas fa-users"></i>
+          <h3>Equipe Especializada</h3>
+          <p>
+            Conte com profissionais experientes em desenvolvimento web e
+            otimização SEO
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manutenção Section -->
+    <section class="maintenance-section">
+      <div class="section-header">
+        <h2>Manutenção e Suporte</h2>
+        <p>Garanta o funcionamento perfeito do seu site</p>
+      </div>
+      <div class="maintenance-grid">
+        <div class="maintenance-card">
+          <i class="fas fa-tools"></i>
+          <h3>Manutenção Mensal</h3>
+          <p class="price">A partir de R$ 297/mês</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Correção de Bugs</li>
+            <li><i class="fas fa-check"></i> Atualizações de Segurança</li>
+            <li><i class="fas fa-check"></i> Backup Diário</li>
+            <li><i class="fas fa-check"></i> Suporte por Email</li>
+          </ul>
+          <a href="#contato" class="btn-neon">Contratar Manutenção</a>
+        </div>
+        <div class="maintenance-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Melhorias e Novidades</h3>
+          <p class="price">Sob Demanda</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Novas Funcionalidades</li>
+            <li><i class="fas fa-check"></i> Otimizações de Performance</li>
+            <li><i class="fas fa-check"></i> Integrações Adicionais</li>
+            <li><i class="fas fa-check"></i> Consultoria de Marketing</li>
+          </ul>
+          <a href="#contato" class="btn-neon">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contact-section">
+      <div class="section-header">
+        <h2>Entre em Contato</h2>
+        <p>Vamos discutir seu projeto</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>contato@syrah.com.br</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <h3>Telefone</h3>
+            <p>(11) 99999-9999</p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>(11) 99999-9999</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Nome" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Telefone" required />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Selecione o Plano</option>
+                <option value="basico">Básico</option>
+                <option value="pro">Pro</option>
+                <option value="enterprise">Enterprise</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn-neon">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketing Digital Section -->
+    <section class="marketing-section">
+      <div class="section-header">
+        <h2>Marketing <span class="highlight">Digital</span></h2>
+        <p>Impulsione sua presença online com nossas soluções de marketing</p>
+      </div>
+      <div class="marketing-grid">
+        <div class="marketing-card">
+          <i class="fab fa-instagram"></i>
+          <h3>Instagram & Facebook</h3>
+          <div class="price">R$ 997</div>
+          <span class="period">por mês</span>
+          <ul>
+            <li><i class="fas fa-check"></i> Gestão de Perfil</li>
+            <li><i class="fas fa-check"></i> 30 Posts por Mês</li>
+            <li><i class="fas fa-check"></i> Stories Diários</li>
+            <li><i class="fas fa-check"></i> Reels Semanais</li>
+            <li><i class="fas fa-check"></i> Relatório Mensal</li>
+            <li><i class="fas fa-check"></i> Gestão de Anúncios</li>
+          </ul>
+          <a href="#contato" class="btn-neon">Contratar Agora</a>
+        </div>
+
+        <div class="marketing-card">
+          <i class="fab fa-google"></i>
+          <h3>Google Ads</h3>
+          <div class="price">R$ 1.497</div>
+          <span class="period">por mês</span>
+          <ul>
+            <li><i class="fas fa-check"></i> Configuração de Campanhas</li>
+            <li><i class="fas fa-check"></i> Gestão de Keywords</li>
+            <li><i class="fas fa-check"></i> Otimização de Anúncios</li>
+            <li><i class="fas fa-check"></i> Landing Pages</li>
+            <li><i class="fas fa-check"></i> Remarketing</li>
+            <li><i class="fas fa-check"></i> Relatório Semanal</li>
+          </ul>
+          <a href="#contato" class="btn-neon">Solicitar Proposta</a>
+        </div>
+
+        <div class="marketing-card">
+          <i class="fab fa-youtube"></i>
+          <h3>YouTube</h3>
+          <div class="price">R$ 1.997</div>
+          <span class="period">por mês</span>
+          <ul>
+            <li><i class="fas fa-check"></i> Otimização do Canal</li>
+            <li><i class="fas fa-check"></i> Edição de Vídeos</li>
+            <li><i class="fas fa-check"></i> SEO para YouTube</li>
+            <li><i class="fas fa-check"></i> Thumbnails Personalizadas</li>
+            <li><i class="fas fa-check"></i> Estratégia de Conteúdo</li>
+            <li><i class="fas fa-check"></i> Análise de Métricas</li>
+          </ul>
+          <a href="#contato" class="btn-neon">Começar Agora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Combos Section -->
+    <section class="combos-section">
+      <div class="section-header">
+        <h2>Combos <span class="highlight">Especiais</span></h2>
+        <p>Maximize seus resultados com nossos pacotes completos</p>
+      </div>
+      <div class="marketing-grid">
+        <div class="combo-card">
+          <span class="combo-tag">MAIS VENDIDO</span>
+          <h3>Combo Essencial</h3>
+          <div class="price">R$ 5.997</div>
+          <span class="period">+ R$ 1.497/mês</span>
+
+          <div class="services-included">
+            <h4>Serviços Inclusos:</h4>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i> Site Profissional (Plano Básico)
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Marketing Instagram & Facebook
+              </li>
+              <li><i class="fas fa-check"></i> Manutenção Mensal</li>
+              <li><i class="fas fa-check"></i> Automação de Email</li>
+              <li><i class="fas fa-check"></i> Suporte Prioritário</li>
+            </ul>
+          </div>
+          <a href="#contato" class="btn-neon">Escolher Combo</a>
+        </div>
+
+        <div class="combo-card">
+          <span class="combo-tag">COMPLETO</span>
+          <h3>Combo Premium</h3>
+          <div class="price">R$ 8.997</div>
+          <span class="period">+ R$ 2.497/mês</span>
+
+          <div class="services-included">
+            <h4>Serviços Inclusos:</h4>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i> Site Profissional (Plano Pro)
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Marketing Instagram & Facebook
+              </li>
+              <li><i class="fas fa-check"></i> Google Ads</li>
+              <li><i class="fas fa-check"></i> Manutenção Premium</li>
+              <li><i class="fas fa-check"></i> Automação Completa</li>
+              <li><i class="fas fa-check"></i> Consultoria Mensal</li>
+            </ul>
+          </div>
+          <a href="#contato" class="btn-neon">Escolher Combo</a>
+        </div>
+
+        <div class="combo-card">
+          <span class="combo-tag">ENTERPRISE</span>
+          <h3>Combo Enterprise</h3>
+          <div class="price">Sob Consulta</div>
+          <span class="period">Personalizado</span>
+
+          <div class="services-included">
+            <h4>Serviços Inclusos:</h4>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i> Site Enterprise Personalizado
+              </li>
+              <li><i class="fas fa-check"></i> Marketing Digital Completo</li>
+              <li><i class="fas fa-check"></i> Automação Avançada</li>
+              <li><i class="fas fa-check"></i> Integrações Personalizadas</li>
+              <li><i class="fas fa-check"></i> Consultoria Dedicada</li>
+              <li><i class="fas fa-check"></i> Suporte 24/7</li>
+            </ul>
+          </div>
+          <a href="#contato" class="btn-neon">Falar com Consultor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (mesmo do index.html) -->
+    <footer class="footer">
+      <!-- ... conteúdo do footer ... -->
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/produto.js"></script>
+  </body>
+</html>
