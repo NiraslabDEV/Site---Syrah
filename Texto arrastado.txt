@@ -1,0 +1,69 @@
+Syrah > A corretora de seguros
+inovadora, ágil e tecnológica, com foco
+em simplificar e transformar a
+experiência de contratação de seguros.
+Nossa essência está na combinação de
+eficiência e modernidade, refletida em
+nossa identidade visual minimalista e
+tecnológica.
+O Azul é a cor central da marca,
+representando confiança,
+profissionalismo e segurança, valores
+que guiam nosso atendimento e nossas
+soluções.
+
+🎨 Prompt para criação do site Syrah Corretora
+
+Criação de um site moderno, minimalista e altamente interativo com efeitos avançados de JavaScript. O site deve impressionar o cliente e demonstrar nossas habilidades técnicas.
+Estilo Visual:
+
+    Cores predominantes: Azul e Branco (modo claro) / Tons de azul-escuro e preto (modo escuro)
+    Layout moderno e minimalista com foco em UI Clean e UX fluida.
+    Hero com efeito Parallax e animações suaves ao rolar a página.
+    Imagens de alta qualidade relacionadas a seguros, consórcios e financiamentos.
+    Tipografia sofisticada que transmite confiança e segurança.
+
+Funcionalidades Técnicas:
+
+    Modo Claro e Escuro – Botão para alternar entre temas.
+    Efeito Parallax na Hero – Criando profundidade e impacto visual.
+    Animações em JavaScript:
+        Cards de planos com animação de entrada ao rolar a página.
+        Botões que reagem ao hover e clique.
+        Elementos interativos para aumentar a experiência do usuário.
+    CTA (Call to Action) altamente persuasivos com botões levando diretamente para o WhatsApp:
+        Cada botão deve redirecionar o usuário para uma mensagem personalizada no WhatsApp, dependendo do produto escolhido.
+    Seção de Planos em Cards:
+        Design elegante e responsivo, apresentando as opções de seguros, consórcios e financiamentos de forma organizada.
+        Cada card deve ter um efeito hover dinâmico para destacar a escolha do usuário.
+
+Copy Persuasiva:
+
+Hero Section: 📢 Proteção e Segurança em um Só Lugar
+🔒 Escolha a Syrah Corretora e tenha tranquilidade em cada decisão
+
+CTA Principal:
+➡️ Solicite um orçamento agora mesmo via WhatsApp!
+
+Sessão de Seguros: 🚗 Seguro Auto – Proteja seu carro contra imprevistos.
+🏠 Seguro Residencial – Segurança e proteção para seu lar.
+🛵 Seguro Moto – Tranquilidade nas ruas com cobertura completa.
+📦 Seguro Transportes – Garantia de proteção para suas mercadorias.
+💰 Seguro Fiança Locatícia – Alugue sem complicação!
+
+Sessão de Consórcio e Financiamento: 🏡 Consórcio Imóvel – Realize o sonho da casa própria!
+🚙 Consórcio Automóvel – Seu carro novo sem juros absurdos.
+💳 Financiamento Automóvel – Condições imperdíveis para seu veículo!
+
+🔗 Cada serviço deve ter um botão CTA levando para o WhatsApp com mensagens pré-configuradas, como:
+
+    "Olá, tenho interesse no Seguro Auto e gostaria de saber mais sobre os planos. Poderia me ajudar?"
+    "Oi! Quero informações sobre o financiamento de veículos. Como funciona?"
+
+Recursos Extras:
+
+    Responsivo para mobile e desktop
+    SEO otimizado
+    Design minimalista, moderno e impactante
+
+🚀 Este site será um verdadeiro show de interatividade e persuasão, com animações, efeitos e uma navegação fluida, deixando qualquer cliente impressionado com nossa habilidade em JavaScript! 🚀
