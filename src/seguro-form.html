@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulação de Seguro - Syrah Corretora</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="assets/logo.png" alt="Syrah Corretora" class="logo" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Voltar ao Site</a>
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="index.html" class="nav-link">Voltar ao Site</a>
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="form-container" data-aos="fade-up">
+        <div class="form-step" id="step1">
+          <h2>Simulação de Seguro</h2>
+          <p>Vamos começar com seus dados básicos</p>
+          <div class="form-field">
+            <label for="tipo_seguro">Tipo de Seguro</label>
+            <select id="tipo_seguro" required onchange="updateFormFields()">
+              <option value="">Selecione o tipo de seguro</option>
+              <option value="auto">Seguro Auto</option>
+              <option value="moto">Seguro Moto</option>
+              <option value="residencial">Seguro Residencial</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              required
+              placeholder="Seu nome completo"
+            />
+          </div>
+          <button class="btn-next" onclick="nextStep(1)">
+            Próximo <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="form-step hidden" id="step2">
+          <h2>Dados do Veículo</h2>
+          <p id="step2-subtitle">Informações sobre seu veículo</p>
+
+          <!-- Campos para Automóvel -->
+          <div id="campos-auto" style="display: none">
+            <div class="form-field">
+              <label for="marca_carro">Marca do Carro</label>
+              <select id="marca_carro" required>
+                <option value="">Selecione a marca</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="fiat">Fiat</option>
+                <option value="ford">Ford</option>
+                <option value="honda">Honda</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="toyota">Toyota</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="audi">Audi</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="modelo_carro">Modelo do Carro</label>
+              <input
+                type="text"
+                id="modelo_carro"
+                placeholder="Ex: Onix"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="ano_carro">Ano do Carro</label>
+              <input
+                type="number"
+                id="ano_carro"
+                min="1990"
+                max="2024"
+                placeholder="Ex: 2020"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Campos para Moto -->
+          <div id="campos-moto" style="display: none">
+            <div class="form-field">
+              <label for="marca_moto">Marca da Moto</label>
+              <select id="marca_moto" required>
+                <option value="">Selecione a marca</option>
+                <option value="honda">Honda</option>
+                <option value="yamaha">Yamaha</option>
+                <option value="suzuki">Suzuki</option>
+                <option value="kawasaki">Kawasaki</option>
+                <option value="bmw">BMW</option>
+                <option value="harley">Harley-Davidson</option>
+                <option value="ducati">Ducati</option>
+                <option value="triumph">Triumph</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="modelo_moto">Modelo da Moto</label>
+              <input
+                type="text"
+                id="modelo_moto"
+                placeholder="Ex: CB 300"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="ano_moto">Ano da Moto</label>
+              <input
+                type="number"
+                id="ano_moto"
+                min="1990"
+                max="2024"
+                placeholder="Ex: 2020"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Campos para Residencial -->
+          <div id="campos-residencial" style="display: none">
+            <div class="form-field">
+              <label for="tipo_imovel">Tipo do Imóvel</label>
+              <select id="tipo_imovel" required>
+                <option value="">Selecione o tipo</option>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="sobrado">Sobrado</option>
+                <option value="chacara">Chácara</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="valor_imovel">Valor do Imóvel</label>
+              <input
+                type="text"
+                id="valor_imovel"
+                placeholder="Ex: R$ 500.000,00"
+                onkeyup="formatCurrency(this)"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="area_construida">Área Construída (m²)</label>
+              <input
+                type="number"
+                id="area_construida"
+                placeholder="Ex: 100"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-buttons">
+            <button class="btn-prev" onclick="prevStep(2)">
+              <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button class="btn-next" onclick="nextStep(2)">
+              Próximo <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-step hidden" id="step3">
+          <h2>Dados de Contato</h2>
+          <p>Como podemos falar com você?</p>
+          <div class="form-field">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              required
+              placeholder="(11) 99999-9999"
+            />
+          </div>
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="seu@email.com"
+            />
+          </div>
+          <div class="form-field">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" required placeholder="00000-000" />
+          </div>
+          <div class="form-buttons">
+            <button class="btn-prev" onclick="prevStep(3)">
+              <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button class="btn-next" onclick="nextStep(3)">
+              Próximo <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-step hidden" id="step4">
+          <h2>Coberturas Desejadas</h2>
+          <p>Selecione as coberturas que você tem interesse</p>
+          <div class="form-field">
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_roubo" checked />
+              Roubo e Furto
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_colisao" checked />
+              Colisão
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_terceiros" checked />
+              Danos a Terceiros
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_vidros" checked />
+              Vidros Completos
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_app" />
+              Acidentes Pessoais de Passageiros (APP)
+            </label>
+          </div>
+          <div
+            class="form-field"
+            id="coberturas-residencial"
+            style="display: none"
+          >
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_incendio" checked />
+              Incêndio, Raio e Explosão
+            </label>
+          </div>
+          <div
+            class="form-field"
+            id="coberturas-residencial-2"
+            style="display: none"
+          >
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_roubo_res" checked />
+              Roubo e Furto
+            </label>
+          </div>
+          <div
+            class="form-field"
+            id="coberturas-residencial-3"
+            style="display: none"
+          >
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_danos_eletricos" checked />
+              Danos Elétricos
+            </label>
+          </div>
+          <div
+            class="form-field"
+            id="coberturas-residencial-4"
+            style="display: none"
+          >
+            <label class="checkbox-label">
+              <input type="checkbox" id="cobertura_vendaval" checked />
+              Vendaval e Granizo
+            </label>
+          </div>
+          <div class="form-buttons">
+            <button class="btn-prev" onclick="prevStep(4)">
+              <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button class="btn-next" onclick="submitForm()">
+              Enviar <i class="fas fa-check"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <img
+            src="assets/logo.png"
+            alt="Syrah Corretora"
+            class="footer-logo"
+          />
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:11992825868"
+              ><i class="fas fa-phone"></i> (11) 99282-5868</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Syrah Corretora. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      function updateFormFields() {
+        const tipoSeguro = document.getElementById("tipo_seguro").value;
+        const camposAuto = document.getElementById("campos-auto");
+        const camposMoto = document.getElementById("campos-moto");
+        const camposResidencial = document.getElementById("campos-residencial");
+
+        // Esconde todos os campos primeiro
+        camposAuto.style.display = "none";
+        camposMoto.style.display = "none";
+        camposResidencial.style.display = "none";
+
+        // Mostra os campos apropriados baseado na seleção
+        if (tipoSeguro === "auto") {
+          camposAuto.style.display = "block";
+          // Reseta os campos de moto e residencial
+          document.getElementById("marca_moto").value = "";
+          document.getElementById("modelo_moto").value = "";
+          document.getElementById("ano_moto").value = "";
+        } else if (tipoSeguro === "moto") {
+          camposMoto.style.display = "block";
+          // Reseta os campos de carro e residencial
+          document.getElementById("marca_carro").value = "";
+          document.getElementById("modelo_carro").value = "";
+          document.getElementById("ano_carro").value = "";
+        } else if (tipoSeguro === "residencial") {
+          camposResidencial.style.display = "block";
+          // Reseta os campos de veículos
+          document.getElementById("marca_carro").value = "";
+          document.getElementById("modelo_carro").value = "";
+          document.getElementById("ano_carro").value = "";
+          document.getElementById("marca_moto").value = "";
+          document.getElementById("modelo_moto").value = "";
+          document.getElementById("ano_moto").value = "";
+        }
+
+        // Atualiza as coberturas
+        updateCoberturas(tipoSeguro);
+      }
+
+      function updateCoberturas(tipoSeguro) {
+        const coberturasAuto = document.querySelectorAll(
+          '[id^="cobertura_"]:not([id^="cobertura_roubo_res"]):not([id^="cobertura_incendio"]):not([id^="cobertura_danos"]):not([id^="cobertura_vendaval"])'
+        );
+        const coberturasResidencial = document.querySelectorAll(
+          '[id^="coberturas-residencial"]'
+        );
+
+        // Esconde todas as coberturas primeiro
+        coberturasAuto.forEach(
+          (el) => (el.closest(".form-field").style.display = "none")
+        );
+        coberturasResidencial.forEach((el) => (el.style.display = "none"));
+
+        // Mostra as coberturas apropriadas
+        if (tipoSeguro === "auto" || tipoSeguro === "moto") {
+          coberturasAuto.forEach(
+            (el) => (el.closest(".form-field").style.display = "block")
+          );
+        } else if (tipoSeguro === "residencial") {
+          coberturasResidencial.forEach((el) => (el.style.display = "block"));
+        }
+      }
+
+      function nextStep(currentStep) {
+        // Validação antes de avançar
+        if (currentStep === 1) {
+          const tipoSeguro = document.getElementById("tipo_seguro").value;
+          const nome = document.getElementById("nome").value;
+
+          if (!tipoSeguro || !nome) {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+            return;
+          }
+        }
+
+        if (currentStep === 2) {
+          const tipoSeguro = document.getElementById("tipo_seguro").value;
+
+          if (tipoSeguro === "auto") {
+            const marca = document.getElementById("marca_carro").value;
+            const modelo = document.getElementById("modelo_carro").value;
+            const ano = document.getElementById("ano_carro").value;
+
+            if (!marca || !modelo || !ano) {
+              alert("Por favor, preencha todos os dados do veículo.");
+              return;
+            }
+          } else if (tipoSeguro === "moto") {
+            const marca = document.getElementById("marca_moto").value;
+            const modelo = document.getElementById("modelo_moto").value;
+            const ano = document.getElementById("ano_moto").value;
+
+            if (!marca || !modelo || !ano) {
+              alert("Por favor, preencha todos os dados da moto.");
+              return;
+            }
+          } else if (tipoSeguro === "residencial") {
+            const tipoImovel = document.getElementById("tipo_imovel").value;
+            const valorImovel = document.getElementById("valor_imovel").value;
+            const areaConstruida =
+              document.getElementById("area_construida").value;
+
+            if (!tipoImovel || !valorImovel || !areaConstruida) {
+              alert("Por favor, preencha todos os dados do imóvel.");
+              return;
+            }
+          }
+        }
+
+        document.getElementById(`step${currentStep}`).classList.add("hidden");
+        document
+          .getElementById(`step${currentStep + 1}`)
+          .classList.remove("hidden");
+      }
+
+      function prevStep(currentStep) {
+        document.getElementById(`step${currentStep}`).classList.add("hidden");
+        document
+          .getElementById(`step${currentStep - 1}`)
+          .classList.remove("hidden");
+      }
+
+      function formatCurrency(input) {
+        let value = input.value.replace(/\D/g, "");
+        value = (value / 100).toFixed(2);
+        value = value.replace(".", ",");
+        value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+        input.value = "R$ " + value;
+      }
+
+      function submitForm() {
+        const tipoSeguro = document.getElementById("tipo_seguro").value;
+        const nome = document.getElementById("nome").value;
+        const telefone = document.getElementById("telefone").value;
+        const email = document.getElementById("email").value;
+        const cep = document.getElementById("cep").value;
+
+        let message = `Olá! Gostaria de simular um seguro.%0A%0A`;
+        message += `*Dados do Cliente*%0A`;
+        message += `Tipo de Seguro: ${
+          tipoSeguro === "auto"
+            ? "Automóvel"
+            : tipoSeguro === "moto"
+            ? "Moto"
+            : "Residencial"
+        }%0A`;
+        message += `Nome: ${nome}%0A`;
+        message += `Telefone: ${telefone}%0A`;
+        message += `E-mail: ${email}%0A`;
+        message += `CEP: ${cep}%0A%0A`;
+
+        if (tipoSeguro === "auto" || tipoSeguro === "moto") {
+          message += `*Dados do Veículo*%0A`;
+          if (tipoSeguro === "auto") {
+            const marca = document.getElementById("marca_carro").value;
+            const modelo = document.getElementById("modelo_carro").value;
+            const ano = document.getElementById("ano_carro").value;
+            message += `Marca: ${marca}%0A`;
+            message += `Modelo: ${modelo}%0A`;
+            message += `Ano: ${ano}%0A`;
+          } else {
+            const marca = document.getElementById("marca_moto").value;
+            const modelo = document.getElementById("modelo_moto").value;
+            const ano = document.getElementById("ano_moto").value;
+            message += `Marca: ${marca}%0A`;
+            message += `Modelo: ${modelo}%0A`;
+            message += `Ano: ${ano}%0A`;
+          }
+        } else if (tipoSeguro === "residencial") {
+          message += `*Dados do Imóvel*%0A`;
+          const tipoImovel = document.getElementById("tipo_imovel").value;
+          const valorImovel = document.getElementById("valor_imovel").value;
+          const areaConstruida =
+            document.getElementById("area_construida").value;
+          message += `Tipo do Imóvel: ${tipoImovel}%0A`;
+          message += `Valor do Imóvel: ${valorImovel}%0A`;
+          message += `Área Construída: ${areaConstruida}m²%0A`;
+        }
+
+        message += `%0A*Coberturas Selecionadas*%0A`;
+        if (tipoSeguro === "auto" || tipoSeguro === "moto") {
+          if (document.getElementById("cobertura_roubo").checked)
+            message += `✓ Roubo e Furto%0A`;
+          if (document.getElementById("cobertura_colisao").checked)
+            message += `✓ Colisão%0A`;
+          if (document.getElementById("cobertura_terceiros").checked)
+            message += `✓ Danos a Terceiros%0A`;
+          if (document.getElementById("cobertura_vidros").checked)
+            message += `✓ Vidros Completos%0A`;
+          if (document.getElementById("cobertura_app").checked)
+            message += `✓ Acidentes Pessoais de Passageiros%0A`;
+        } else if (tipoSeguro === "residencial") {
+          if (document.getElementById("cobertura_incendio").checked)
+            message += `✓ Incêndio, Raio e Explosão%0A`;
+          if (document.getElementById("cobertura_roubo_res").checked)
+            message += `✓ Roubo e Furto%0A`;
+          if (document.getElementById("cobertura_danos_eletricos").checked)
+            message += `✓ Danos Elétricos%0A`;
+          if (document.getElementById("cobertura_vendaval").checked)
+            message += `✓ Vendaval e Granizo%0A`;
+        }
+
+        message += `%0AAguardo contato para mais informações!`;
+
+        window.location.href = `https://wa.me/5511992825868?text=${message}`;
+      }
+    </script>
+  </body>
+</html>
