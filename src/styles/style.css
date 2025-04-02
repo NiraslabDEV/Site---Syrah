@@ -306,13 +306,25 @@ body {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  animation: bounce 2s infinite;
+  z-index: 2;
+}
+
+.scroll-indicator span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .scroll-indicator span {
+  color: var(--text-color);
 }
 
 .mouse {
   width: 30px;
   height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--primary-color);
   border-radius: 15px;
   margin: 0 auto 1rem;
   position: relative;
@@ -326,7 +338,7 @@ body {
   transform: translateX(-50%);
   width: 4px;
   height: 8px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--primary-color);
   border-radius: 2px;
   animation: scroll 1.5s infinite;
 }
@@ -340,6 +352,14 @@ body {
     transform: translate(-50%, 15px);
     opacity: 0;
   }
+}
+
+[data-theme="dark"] .mouse {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .mouse::before {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* Services Section */
