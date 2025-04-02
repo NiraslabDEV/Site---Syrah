@@ -74,14 +74,21 @@
           <div class="stat-card">
             <span class="stat-number" data-target="1500">0</span>
             <span class="stat-label">Clientes Satisfeitos</span>
+            <p class="stat-description">
+              Famílias e empresas protegidas pela Syrah
+            </p>
           </div>
           <div class="stat-card">
             <span class="stat-number" data-target="98">0</span>
             <span class="stat-label">% de Aprovação</span>
+            <p class="stat-description">
+              Avaliação positiva dos nossos clientes
+            </p>
           </div>
           <div class="stat-card">
             <span class="stat-number" data-target="24">0</span>
             <span class="stat-label">Horas de Suporte</span>
+            <p class="stat-description">Atendimento todos os dias da semana</p>
           </div>
         </div>
       </div>
@@ -655,7 +662,18 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Syrah Corretora. Todos os direitos reservados.</p>
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
       </div>
     </footer>
 
@@ -676,5 +694,15 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+    </script>
   </body>
 </html>

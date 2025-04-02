@@ -6,30 +6,49 @@ AOS.init({
   easing: "ease-out",
 });
 
-// Tema escuro/claro
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
-const icon = themeToggle.querySelector("i");
+// Tema
+function initTheme() {
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const currentTheme = localStorage.getItem("theme");
+  const icon = themeToggle.querySelector("i");
+  const iconMobile = themeToggleMobile.querySelector("i");
 
-// Verifica se há preferência salva
-const savedTheme = localStorage.getItem("theme") || "dark";
-body.setAttribute("data-theme", savedTheme);
-icon.className = savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+  // Define o tema claro como padrão se nenhum tema estiver salvo
+  if (!currentTheme) {
+    document.documentElement.setAttribute("data-theme", "light");
+    icon.className = "fas fa-moon";
+    iconMobile.className = "fas fa-moon";
+  } else {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    if (currentTheme === "dark") {
+      icon.className = "fas fa-sun";
+      iconMobile.className = "fas fa-sun";
+    } else {
+      icon.className = "fas fa-moon";
+      iconMobile.className = "fas fa-moon";
+    }
+  }
 
-themeToggle.addEventListener("click", () => {
-  const currentTheme = body.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  function toggleTheme() {
+    const theme = document.documentElement.getAttribute("data-theme");
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      icon.className = "fas fa-sun";
+      iconMobile.className = "fas fa-sun";
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      icon.className = "fas fa-moon";
+      iconMobile.className = "fas fa-moon";
+    }
+  }
 
-  body.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-
-  // Atualiza o ícone com animação
-  icon.style.transform = "rotate(180deg)";
-  setTimeout(() => {
-    icon.className = newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
-    icon.style.transform = "rotate(0deg)";
-  }, 150);
-});
+  themeToggle.addEventListener("click", toggleTheme);
+  themeToggleMobile.addEventListener("click", toggleTheme);
+}
 
 // Menu Mobile
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
