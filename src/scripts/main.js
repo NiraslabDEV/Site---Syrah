@@ -1,8 +1,9 @@
-// Inicialização do AOS (Animate on Scroll)
+// Inicialização do AOS com configurações mais suaves
 AOS.init({
   duration: 800,
   once: true,
   offset: 100,
+  easing: "ease-out",
 });
 
 // Tema escuro/claro
@@ -179,4 +180,26 @@ window.addEventListener("scroll", () => {
   }
 
   lastScroll = currentScroll;
+});
+
+// Popup de Boas-vindas
+const welcomePopup = document.querySelector(".welcome-popup");
+
+// Mostra o popup após 10 segundos
+setTimeout(() => {
+  welcomePopup.classList.add("active");
+  image.png;
+}, 5000);
+
+// Fecha o popup ao clicar no botão de acessar
+const accessButton = welcomePopup.querySelector(".btn-primary");
+accessButton.addEventListener("click", () => {
+  welcomePopup.classList.remove("active");
+});
+
+// Fecha o popup ao clicar fora dele
+welcomePopup.addEventListener("click", (e) => {
+  if (e.target === welcomePopup) {
+    welcomePopup.classList.remove("active");
+  }
 });
