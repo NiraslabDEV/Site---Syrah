@@ -1220,7 +1220,7 @@ body {
   padding: 0.8rem 0;
   width: 100%;
   text-align: left;
-  font-size: 1.1rem;
+    font-size: 1.1rem;
   background: none;
   border: none;
   color: var(--text-color);
@@ -2047,7 +2047,7 @@ body {
 
 @media (max-width: 768px) {
   .page-hero h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
   }
 
   .product-description h2,
@@ -2055,7 +2055,7 @@ body {
   .plans-section h3,
   .testimonials-section h3,
   .cta-box h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
   }
 
   .features-grid,
