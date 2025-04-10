@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Seguro Auto</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../../index.html" class="nav-link">Início</a>
+
+          <div class="nav-item">
+            <a class="nav-link active">Seguros</a>
+            <div class="dropdown-menu">
+              <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+              <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+              <a href="../caminhao/index.html" class="dropdown-item"
+                >Seguro Caminhão</a
+              >
+              <a href="../residencial/index.html" class="dropdown-item"
+                >Seguro Residencial</a
+              >
+              <a href="../fianca/index.html" class="dropdown-item"
+                >Seguro Fiança</a
+              >
+              <a href="../index-seguros.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Consórcio</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../consorcio/automovel/index.html"
+                class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a
+                href="../../consorcio/index-consorcio.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Financiamento</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../financiamento/automovel/index.html"
+                class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a
+                href="../../financiamento/index-financiamento.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+          <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+          <a href="../caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../fianca/index.html" class="dropdown-item">Seguro Fiança</a>
+          <a href="../index-seguros.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../consorcio/automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../../consorcio/index-consorcio.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a
+            href="../../financiamento/automovel/index.html"
+            class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a
+            href="../../financiamento/index-financiamento.html"
+            class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../index-seguros.html">Seguros</a></li>
+            <li>Seguro Auto</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Seguro <span class="highlight">Auto</span></h1>
+            <p>
+              Proteção completa para seu veículo com a melhor cobertura do
+              mercado. Tenha tranquilidade para dirigir sabendo que você está
+              seguro.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Auto%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">Solicitar Cotação</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Section -->
+      <section class="features-section" id="coberturas">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Principais</span></h2>
+          <p>As coberturas essenciais que o seu Seguro Auto precisa ter</p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <i class="fas fa-car-crash"></i>
+            <h3>Colisão</h3>
+            <p>
+              Cobertura para danos ao seu veículo em caso de colisão com outro
+              veículo ou objeto.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Roubo e Furto</h3>
+            <p>
+              Proteção em caso de roubo ou furto do seu veículo, com indenização
+              integral.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-user-shield"></i>
+            <h3>Danos a Terceiros</h3>
+            <p>
+              Cobertura para danos materiais e corporais causados a terceiros em
+              acidentes.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-fire-alt"></i>
+            <h3>Incêndio</h3>
+            <p>
+              Proteção contra danos causados por incêndio, raio e explosão no
+              seu veículo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Adicionais -->
+      <section class="alt-features" id="adicionais">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Adicionais</span></h2>
+          <p>Personalize seu seguro com coberturas complementares</p>
+        </div>
+        <div class="features-container column-layout">
+          <div class="feature-column" data-aos="fade-up">
+            <div class="feature-group">
+              <i class="fas fa-car-side"></i>
+              <div>
+                <h3>Carro Reserva</h3>
+                <p>
+                  Disponibilização de veículo reserva enquanto seu carro estiver
+                  em reparo.
+                </p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <i class="fas fa-tools"></i>
+              <div>
+                <h3>Assistência 24h</h3>
+                <p>
+                  Serviços de guincho, chaveiro, troca de pneus e assistência
+                  mecânica emergencial.
+                </p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <i class="fas fa-ambulance"></i>
+              <div>
+                <h3>Assistência Médica</h3>
+                <p>
+                  Cobertura para despesas médicas em caso de acidente com o
+                  veículo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-column" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-group">
+              <i class="fas fa-window-restore"></i>
+              <div>
+                <h3>Vidros Completos</h3>
+                <p>Cobertura para vidros, faróis, lanternas e retrovisores.</p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <i class="fas fa-money-check-alt"></i>
+              <div>
+                <h3>Isenção de Franquia</h3>
+                <p>
+                  Opção de isenção de franquia em determinadas situações de
+                  sinistro.
+                </p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <i class="fas fa-truck-monster"></i>
+              <div>
+                <h3>Acessórios</h3>
+                <p>
+                  Cobertura para equipamentos e acessórios não originais de
+                  fábrica.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planos Section -->
+      <section class="pricing-section" id="planos">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nossos <span class="highlight">Planos</span></h2>
+          <p>Escolha o plano que melhor atende suas necessidades</p>
+        </div>
+        <div class="pricing-container">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Básico</h3>
+              <p class="price">A partir de<br /><span>R$ 85</span>/mês*</p>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura contra roubo e furto
+                </li>
+                <li><i class="fas fa-check"></i> Proteção contra terceiros</li>
+                <li><i class="fas fa-check"></i> Assistência 24h básica</li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Carro reserva
+                </li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Cobertura de vidros
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Básico%20do%20Seguro%20Auto"
+              class="pricing-btn"
+            >
+              <i class="fab fa-whatsapp"></i> Solicitar Cotação
+            </a>
+            <p class="pricing-note">
+              *Valor aproximado. Sujeito à análise de perfil.
+            </p>
+          </div>
+
+          <div
+            class="pricing-card featured"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card-tag">Mais Popular</div>
+            <div class="pricing-header">
+              <h3>Plano Completo</h3>
+              <p class="price">A partir de<br /><span>R$ 135</span>/mês*</p>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura contra roubo e furto
+                </li>
+                <li><i class="fas fa-check"></i> Proteção contra terceiros</li>
+                <li><i class="fas fa-check"></i> Assistência 24h completa</li>
+                <li><i class="fas fa-check"></i> Carro reserva por 15 dias</li>
+                <li><i class="fas fa-check"></i> Cobertura básica de vidros</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Completo%20do%20Seguro%20Auto"
+              class="pricing-btn"
+            >
+              <i class="fab fa-whatsapp"></i> Solicitar Cotação
+            </a>
+            <p class="pricing-note">
+              *Valor aproximado. Sujeito à análise de perfil.
+            </p>
+          </div>
+
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-header">
+              <h3>Plano Premium</h3>
+              <p class="price">A partir de<br /><span>R$ 185</span>/mês*</p>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura contra roubo e furto
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Proteção contra terceiros (valor
+                  ampliado)
+                </li>
+                <li><i class="fas fa-check"></i> Assistência 24h VIP</li>
+                <li><i class="fas fa-check"></i> Carro reserva por 30 dias</li>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura completa de vidros
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Premium%20do%20Seguro%20Auto"
+              class="pricing-btn"
+            >
+              <i class="fab fa-whatsapp"></i> Solicitar Cotação
+            </a>
+            <p class="pricing-note">
+              *Valor aproximado. Sujeito à análise de perfil.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Depoimentos Section -->
+      <section class="testimonials-section" id="depoimentos">
+        <div class="section-header" data-aos="fade-up">
+          <h2><span class="highlight">Depoimentos</span> dos Clientes</h2>
+          <p>Veja o que nossos clientes dizem sobre o nosso seguro auto</p>
+        </div>
+        <div class="testimonials-container">
+          <div class="testimonial" data-aos="fade-up">
+            <div class="quote">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p>
+              "Precisei acionar o seguro após uma colisão e fiquei impressionado
+              com a rapidez no atendimento. Em menos de 1 hora o guincho já
+              estava no local e tive carro reserva no mesmo dia."
+            </p>
+            <div class="testimonial-author">
+              <img src="../../assets/testimonial1.jpg" alt="Cliente" />
+              <div>
+                <h4>Roberto Almeida</h4>
+                <span>Cliente desde 2023</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+            <div class="quote">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p>
+              "A Syrah conseguiu reduzir o valor do meu seguro em quase 30%
+              comparado com o que eu pagava, mantendo as mesmas coberturas e
+              ainda adicionando proteção para vidros. Estou muito satisfeita!"
+            </p>
+            <div class="testimonial-author">
+              <img src="../../assets/testimonial2.jpg" alt="Cliente" />
+              <div>
+                <h4>Carla Mendes</h4>
+                <span>Cliente desde 2022</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+            <div class="quote">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p>
+              "O atendimento da Syrah é excelente! Quando meu carro foi roubado,
+              eles me ajudaram com todo o processo junto à seguradora e a
+              indenização foi paga em tempo recorde. Recomendo a todos!"
+            </p>
+            <div class="testimonial-author">
+              <img src="../../assets/testimonial3.jpg" alt="Cliente" />
+              <div>
+                <h4>Marcelo Santos</h4>
+                <span>Cliente desde 2021</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre o seguro auto</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>
+                Quais são os critérios para definir o valor do seguro auto?
+              </h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O valor do seguro auto é definido com base em diversos fatores,
+                como: perfil do motorista (idade, tempo de CNH, histórico de
+                sinistros), características do veículo (modelo, ano, valor de
+                mercado), local de pernoite, uso do veículo (particular ou
+                comercial), coberturas contratadas e franquia escolhida. As
+                seguradoras utilizam estatísticas de sinistros para calcular o
+                risco e determinar o preço.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>
+                O que acontece se eu emprestar meu carro para outra pessoa
+                dirigir?
+              </h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Se você emprestar seu carro para outra pessoa dirigir e ocorrer
+                um sinistro, o seguro geralmente cobre o evento, desde que o
+                condutor tenha habilitação válida e não esteja em situação
+                irregular (ex: embriagado). Entretanto, é importante verificar
+                as condições da sua apólice, pois algumas seguradoras podem
+                aplicar restrições ou aumento na franquia quando o condutor não
+                é o principal declarado na apólice.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>É possível reduzir o valor do meu seguro auto?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, existem algumas estratégias para reduzir o valor do seguro
+                auto: instalar dispositivos antifurto, optar por franquias
+                maiores, fazer cotações em diferentes seguradoras, manter um bom
+                histórico sem sinistros, aproveitar descontos por ter outros
+                produtos na mesma seguradora (multicontratos) e ajustar as
+                coberturas para o que realmente você precisa. Na Syrah
+                Corretora, analisamos seu perfil e necessidades para encontrar o
+                melhor custo-benefício.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Como funciona o bônus no seguro auto?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O bônus é um desconto progressivo concedido pelas seguradoras a
+                cada ano sem sinistros. A cada período de vigência da apólice
+                sem acionamento do seguro, você sobe uma classe de bônus, que
+                pode chegar até a classe 10, proporcionando descontos
+                significativos. Se houver sinistro, pode haver redução de
+                classes. O bônus é pessoal e intransferível, mas algumas
+                seguradoras permitem transferência entre cônjuges ou parentes de
+                1º grau mediante comprovação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Solicite sua cotação agora mesmo</h2>
+          <p>
+            Entre em contato para receber um comparativo das melhores opções de
+            seguro auto para o seu perfil.
+          </p>
+          <div class="cta-buttons">
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Auto%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">WhatsApp</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="tel:1123624860" class="btn-neon secondary">
+              <span class="btn-text">Ligar Agora</span>
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../../index.html">Início</a>
+            <a href="../index-seguros.html">Seguros</a>
+            <a href="../../consorcio/index-consorcio.html">Consórcio</a>
+            <a href="../../financiamento/index-financiamento.html"
+              >Financiamento</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Auto%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Seguro Moto</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../../index.html" class="nav-link">Início</a>
+
+          <div class="nav-item">
+            <a class="nav-link active">Seguros</a>
+            <div class="dropdown-menu">
+              <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+              <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+              <a href="../caminhao/index.html" class="dropdown-item"
+                >Seguro Caminhão</a
+              >
+              <a href="../residencial/index.html" class="dropdown-item"
+                >Seguro Residencial</a
+              >
+              <a href="../fianca/index.html" class="dropdown-item"
+                >Seguro Fiança</a
+              >
+              <a href="../index-seguros.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Consórcio</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../consorcio/automovel/index.html"
+                class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a
+                href="../../consorcio/index-consorcio.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Financiamento</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../financiamento/automovel/index.html"
+                class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a
+                href="../../financiamento/index-financiamento.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+          <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+          <a href="../caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../fianca/index.html" class="dropdown-item">Seguro Fiança</a>
+          <a href="../index-seguros.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../consorcio/automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../../consorcio/index-consorcio.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a
+            href="../../financiamento/automovel/index.html"
+            class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a
+            href="../../financiamento/index-financiamento.html"
+            class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../index-seguros.html">Seguros</a></li>
+            <li>Seguro Moto</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Seguro <span class="highlight">Moto</span></h1>
+            <p>
+              Proteção completa para sua motocicleta com coberturas exclusivas
+              para motociclistas. Pilote com tranquilidade sabendo que você está
+              protegido.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Moto%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">Solicitar Cotação</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Section -->
+      <section class="features-section" id="coberturas">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Principais</span></h2>
+          <p>As coberturas essenciais que o seu Seguro Moto precisa ter</p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-motorcycle"></i>
+            <h3>Colisão</h3>
+            <p>
+              Cobertura para danos à sua motocicleta em caso de colisão com
+              outro veículo ou objeto.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-shield-alt"></i>
+            <h3>Roubo e Furto</h3>
+            <p>
+              Proteção em caso de roubo ou furto da sua motocicleta, com
+              indenização integral do valor segurado.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-user-shield"></i>
+            <h3>Danos a Terceiros</h3>
+            <p>
+              Cobertura para danos materiais e corporais causados a terceiros em
+              acidentes envolvendo sua moto.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-fire-alt"></i>
+            <h3>Incêndio</h3>
+            <p>
+              Proteção contra danos causados por incêndio, raio e explosão na
+              sua motocicleta.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Adicionais -->
+      <section class="features-section" id="adicionais">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Adicionais</span></h2>
+          <p>
+            Personalize seu seguro com coberturas complementares para
+            motocicletas
+          </p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-coins"></i>
+            <h3>Auxílio Transporte</h3>
+            <p>
+              Benefício financeiro para transporte alternativo durante o período
+              de reparo da sua moto, com opções de 7, 15 ou 30 dias.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-tools"></i>
+            <h3>Assistência 24h</h3>
+            <p>
+              Serviços de guincho, chaveiro e assistência mecânica emergencial
+              em todo o território nacional, com atendimento especializado para
+              motocicletas.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-tshirt"></i>
+            <h3>Equipamentos</h3>
+            <p>
+              Cobertura para acessórios e equipamentos como baús, mata-cachorro,
+              bagageiros, protetor de motor e carenagens especiais.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-user-md"></i>
+            <h3>Despesas Médicas</h3>
+            <p>
+              Cobertura para despesas médicas e hospitalares em caso de
+              acidentes envolvendo o condutor e passageiro.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planos Section -->
+      <section class="pricing-section" id="planos">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nossos <span class="highlight">Planos</span></h2>
+          <p>Escolha o plano que melhor atende às suas necessidades</p>
+        </div>
+        <div class="pricing-container">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Básico</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 50/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura contra roubo e furto
+                </li>
+                <li><i class="fas fa-check"></i> Cobertura contra incêndio</li>
+                <li><i class="fas fa-check"></i> Danos a terceiros básico</li>
+                <li><i class="fas fa-check"></i> Assistência 24h (100km)</li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Auxílio transporte
+                </li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Cobertura para equipamentos
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Básico%20de%20Seguro%20Moto%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+
+          <div class="pricing-card featured" data-aos="fade-up">
+            <div class="card-tag">Mais Popular</div>
+            <div class="pricing-header">
+              <h3>Plano Completo</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 80/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li><i class="fas fa-check"></i> Roubo, furto e incêndio</li>
+                <li><i class="fas fa-check"></i> Danos a terceiros ampliado</li>
+                <li><i class="fas fa-check"></i> Assistência 24h (200km)</li>
+                <li>
+                  <i class="fas fa-check"></i> Auxílio transporte (15 dias)
+                </li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Cobertura para equipamentos
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Completo%20de%20Seguro%20Moto%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Premium</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 120/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li><i class="fas fa-check"></i> Roubo, furto e incêndio</li>
+                <li><i class="fas fa-check"></i> Danos a terceiros máximo</li>
+                <li>
+                  <i class="fas fa-check"></i> Assistência 24h (sem limite)
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Auxílio transporte (30 dias)
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura para equipamentos
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Premium%20de%20Seguro%20Moto%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+        </div>
+        <div class="pricing-note" data-aos="fade-up">
+          <p>
+            * Valores aproximados. O preço final dependerá do perfil do
+            condutor, modelo da motocicleta, cilindrada e coberturas
+            selecionadas.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre o seguro moto</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>A cilindrada da moto influencia no valor do seguro?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, a cilindrada é um dos principais fatores que influenciam o
+                preço do seguro. Geralmente, motos de maior cilindrada têm
+                prêmios mais elevados devido ao maior potencial de danos em caso
+                de acidente e ao maior valor de mercado. Entretanto, outros
+                fatores como perfil do condutor, região de circulação e índice
+                de roubo do modelo também são considerados no cálculo.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>É possível incluir acessórios e equipamentos no seguro?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, é possível contratar coberturas específicas para acessórios
+                e equipamentos como baús, protetor de motor, escapamentos
+                especiais, entre outros. É importante informar todos os
+                acessórios no momento da contratação e manter a apólice
+                atualizada quando novos equipamentos forem instalados. Essa
+                cobertura geralmente é opcional e implica em um acréscimo no
+                valor do prêmio.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>
+                O seguro cobre danos ao capacete e equipamentos do motociclista?
+              </h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A cobertura para equipamentos de proteção do motociclista
+                (capacete, jaqueta, luvas, etc.) é uma cobertura adicional
+                oferecida por algumas seguradoras. Não é incluída
+                automaticamente nas apólices padrão, mas pode ser contratada
+                separadamente. É importante verificar os limites de cobertura e
+                as condições específicas, como a necessidade de comprovar a
+                propriedade dos itens através de notas fiscais.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Seguro moto cobre o motociclista em caso de acidentes?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O seguro básico de moto não inclui automaticamente cobertura
+                para danos físicos ao condutor, mas é possível contratar
+                coberturas adicionais como Acidentes Pessoais de Passageiros
+                (APP) e Despesas Médico-Hospitalares (DMH). Estas coberturas são
+                extremamente recomendadas para motociclistas, pois oferecem
+                proteção financeira em caso de acidentes com lesões,
+                complementando o DPVAT e planos de saúde.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Pronto para proteger sua moto?</h2>
+          <p>
+            Solicite uma cotação personalizada e descubra como podemos oferecer
+            a melhor proteção para sua motocicleta.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Moto%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Solicitar Cotação</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../index.html">
+            <img
+              src="../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../../index.html">Início</a>
+            <a href="../index.html">Seguros</a>
+            <a href="../../consorcio/index.html">Consórcio</a>
+            <a href="../../financiamento/index.html">Financiamento</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Moto%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Consórcio de Automóvel</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../../index.html" class="nav-link">Início</a>
+
+          <div class="nav-item">
+            <a class="nav-link">Seguros</a>
+            <div class="dropdown-menu">
+              <a href="../../seguros/auto/index.html" class="dropdown-item"
+                >Seguro Auto</a
+              >
+              <a href="../../seguros/moto/index.html" class="dropdown-item"
+                >Seguro Moto</a
+              >
+              <a href="../../seguros/caminhao/index.html" class="dropdown-item"
+                >Seguro Caminhão</a
+              >
+              <a
+                href="../../seguros/residencial/index.html"
+                class="dropdown-item"
+                >Seguro Residencial</a
+              >
+              <a href="../../seguros/fianca/index.html" class="dropdown-item"
+                >Seguro Fiança</a
+              >
+              <a href="../../seguros/index-seguros.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link active">Consórcio</a>
+            <div class="dropdown-menu">
+              <a href="../automovel/index.html" class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="../imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a href="../index-consorcio.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Financiamento</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../financiamento/automovel/index.html"
+                class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a
+                href="../../financiamento/index-financiamento.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../seguros/auto/index.html" class="dropdown-item"
+            >Seguro Auto</a
+          >
+          <a href="../../seguros/moto/index.html" class="dropdown-item"
+            >Seguro Moto</a
+          >
+          <a href="../../seguros/caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../../seguros/residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../../seguros/fianca/index.html" class="dropdown-item"
+            >Seguro Fiança</a
+          >
+          <a href="../../seguros/index-seguros.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../index-consorcio.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a
+            href="../../financiamento/automovel/index.html"
+            class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a
+            href="../../financiamento/index-financiamento.html"
+            class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../index-consorcio.html">Consórcio</a></li>
+            <li>Consórcio de Automóvel</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Consórcio de <span class="highlight">Automóvel</span></h1>
+            <p>
+              Planeje a aquisição do seu automóvel de forma inteligente e
+              econômica. Sem juros, apenas taxa administrativa para você
+              conquistar o carro dos seus sonhos.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20simulação%20de%20Consórcio%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">Simular Consórcio</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vantagens Section -->
+      <section class="features-section" id="vantagens">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Vantagens do <span class="highlight">Consórcio Auto</span></h2>
+          <p>
+            Descubra por que o consórcio é a melhor opção para adquirir seu
+            veículo
+          </p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-percentage"></i>
+            <h3>Sem Juros</h3>
+            <p>
+              No consórcio você paga apenas o valor do bem e a taxa de
+              administração, sem juros como no financiamento, economizando
+              significativamente.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Parcelas Acessíveis</h3>
+            <p>
+              Parcelas que cabem no seu orçamento, com prazos estendidos e
+              possibilidade de escolher o plano que melhor se adapta à sua
+              capacidade financeira.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Flexibilidade</h3>
+            <p>
+              Ao ser contemplado, você pode escolher qualquer veículo dentro da
+              categoria, inclusive modelos diferentes do planejado inicialmente.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-gavel"></i>
+            <h3>Poder de Compra</h3>
+            <p>
+              Ao ser contemplado, você tem o poder de negociação de uma compra à
+              vista, podendo conseguir descontos maiores nas concessionárias.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modalidades Section -->
+      <section class="pricing-section" id="modalidades">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nossas <span class="highlight">Modalidades</span></h2>
+          <p>Escolha o plano que melhor atende às suas necessidades</p>
+        </div>
+        <div class="pricing-container">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Básico</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 399,00/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Créditos de R$ 30 mil a R$ 50 mil
+                </li>
+                <li><i class="fas fa-check"></i> Prazo de até 60 meses</li>
+                <li><i class="fas fa-check"></i> Taxa administrativa de 14%</li>
+                <li><i class="fas fa-check"></i> Para automóveis populares</li>
+                <li><i class="fas fa-check"></i> Contemplação por sorteio</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20o%20Plano%20Básico%20de%20Consórcio%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Simular Agora</a
+            >
+          </div>
+
+          <div class="pricing-card featured" data-aos="fade-up">
+            <div class="card-tag">Mais Popular</div>
+            <div class="pricing-header">
+              <h3>Plano Intermediário</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 699,00/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Créditos de R$ 50 mil a R$ 100
+                  mil
+                </li>
+                <li><i class="fas fa-check"></i> Prazo de até 80 meses</li>
+                <li><i class="fas fa-check"></i> Taxa administrativa de 13%</li>
+                <li><i class="fas fa-check"></i> Para SUVs e sedãs médios</li>
+                <li>
+                  <i class="fas fa-check"></i> Contemplação por sorteio e lance
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20o%20Plano%20Intermediário%20de%20Consórcio%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Simular Agora</a
+            >
+          </div>
+
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Premium</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 1.299,00/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Créditos de R$ 100 mil a R$ 300
+                  mil
+                </li>
+                <li><i class="fas fa-check"></i> Prazo de até 100 meses</li>
+                <li><i class="fas fa-check"></i> Taxa administrativa de 12%</li>
+                <li><i class="fas fa-check"></i> Para veículos de luxo</li>
+                <li><i class="fas fa-check"></i> Prioridade na contemplação</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20o%20Plano%20Premium%20de%20Consórcio%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Simular Agora</a
+            >
+          </div>
+        </div>
+        <div class="pricing-note" data-aos="fade-up">
+          <p>
+            * Valores aproximados. O valor final da parcela dependerá do crédito
+            contratado, prazo escolhido e taxa de administração da
+            administradora.
+          </p>
+        </div>
+      </section>
+
+      <!-- Funcionamento Section -->
+      <section class="process-section" id="processo">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Como <span class="highlight">Funciona</span></h2>
+          <p>Conheça o passo a passo do consórcio de automóvel</p>
+        </div>
+        <div class="process-container">
+          <div class="process-item" data-aos="fade-up">
+            <div class="process-number">1</div>
+            <div class="process-content">
+              <h3>Simulação e Adesão</h3>
+              <p>
+                Entre em contato conosco para simular as condições e valores de
+                parcelas. Após escolher o plano ideal, fazemos sua adesão ao
+                grupo de consórcio.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-number">2</div>
+            <div class="process-content">
+              <h3>Pagamento das Parcelas</h3>
+              <p>
+                Você começa a pagar as parcelas mensais que formam o fundo comum
+                do grupo, utilizado para a contemplação dos participantes.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-number">3</div>
+            <div class="process-content">
+              <h3>Contemplação</h3>
+              <p>
+                A contemplação ocorre mensalmente através de sorteio ou lance.
+                No sorteio, todos têm chance igual. No lance, ganha quem
+                oferecer pagar antecipadamente o maior número de parcelas.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-number">4</div>
+            <div class="process-content">
+              <h3>Escolha do Veículo</h3>
+              <p>
+                Após a contemplação, você escolhe o veículo desejado dentro do
+                valor do seu crédito e apresenta à administradora para análise e
+                aprovação.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="process-number">5</div>
+            <div class="process-content">
+              <h3>Aquisição do Bem</h3>
+              <p>
+                Com a aprovação, a administradora paga o valor diretamente ao
+                vendedor, e você continua pagando as parcelas normalmente até o
+                final do plano.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre consórcio de automóvel</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>
+                O que acontece se eu não for contemplado até o final do plano?
+              </h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Todos os participantes de um grupo de consórcio são contemplados
+                até o final do plano. O último sorteio contempla automaticamente
+                todos os consorciados restantes. Isso garante que, mesmo que
+                você não tenha sido sorteado ou dado lances, receberá seu
+                crédito ao término do grupo.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Posso transferir meu consórcio para outra pessoa?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, é possível transferir seu consórcio para terceiros. Esse
+                processo é chamado de "transferência de cota" e pode ser feito
+                tanto para cotas não contempladas quanto para cotas já
+                contempladas. A administradora fará uma análise de crédito do
+                novo consorciado e, após aprovação, a transferência é
+                formalizada.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Posso adquirir um veículo usado com o consórcio?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, é possível adquirir veículos usados através do consórcio,
+                desde que o veículo tenha até 8 anos de fabricação (em alguns
+                casos até 10 anos, dependendo da administradora). O veículo
+                passará por uma avaliação da administradora para verificar seu
+                valor de mercado e condições gerais antes da aprovação.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>O que é taxa de administração e fundo de reserva?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A taxa de administração é o valor cobrado pela administradora
+                pelo serviço de gestão do grupo de consórcio, geralmente
+                calculada sobre o valor do bem e diluída nas parcelas. O fundo
+                de reserva, quando existe, é um valor adicional destinado a
+                cobrir eventuais inadimplências no grupo ou despesas
+                extraordinárias, garantindo a saúde financeira do grupo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Realize o sonho do seu automóvel</h2>
+          <p>
+            Solicite uma simulação personalizada e descubra como o consórcio
+            pode ser a melhor opção para conquistar seu veículo.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20simulação%20de%20Consórcio%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Simular Consórcio</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../../index.html">Início</a>
+            <a href="../../seguros/index-seguros.html">Seguros</a>
+            <a href="../index-consorcio.html">Consórcio</a>
+            <a href="../../financiamento/index-financiamento.html"
+              >Financiamento</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Consórcio%20de%20Automóvel%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

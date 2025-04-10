@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Financiamento</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../index.html">
+            <img src="../assets/logo.png" alt="Syrah Corretora" class="logo" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-link">Início</a>
+          <a href="../seguros/index-seguros.html" class="nav-link">Seguros</a>
+          <a href="../consorcio/index-consorcio.html" class="nav-link"
+            >Consórcio</a
+          >
+          <div class="nav-item">
+            <a class="nav-link active">Financiamento</a>
+            <div class="dropdown-menu">
+              <a href="automovel/index.html" class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a href="index-financiamento.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../seguros/auto/index.html" class="dropdown-item"
+            >Seguro Auto</a
+          >
+          <a href="../seguros/moto/index.html" class="dropdown-item"
+            >Seguro Moto</a
+          >
+          <a href="../seguros/caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../seguros/residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../seguros/fianca/index.html" class="dropdown-item"
+            >Seguro Fiança</a
+          >
+          <a href="../seguros/index-seguros.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../consorcio/automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../consorcio/imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../consorcio/index-consorcio.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="automovel/index.html" class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a href="index-financiamento.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Hero Section com fundo mais claro e conteúdo centralizado -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Financiamento <span class="highlight">Facilitado</span></h1>
+            <p>
+              Realize seu sonho de forma rápida e prática. O financiamento da
+              Syrah Corretora oferece as melhores taxas do mercado e aprovação
+              acelerada para você conquistar seus objetivos com mais facilidade.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Financiamento"
+              class="btn-neon"
+            >
+              <span class="btn-text">Simular Financiamento</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefícios Section -->
+      <section class="features-section" id="beneficios">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Vantagens do <span class="highlight">Financiamento</span></h2>
+          <p>
+            Conheça as vantagens de escolher o financiamento como forma de
+            aquisição
+          </p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-bolt"></i>
+            <h3>Aquisição Imediata</h3>
+            <p>
+              Adquira seu bem imediatamente, sem necessidade de aguardar
+              contemplação como no consórcio.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-chart-line"></i>
+            <h3>Taxas Competitivas</h3>
+            <p>
+              Trabalhamos com as melhores instituições financeiras do mercado
+              para garantir as taxas mais atrativas.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-file-signature"></i>
+            <h3>Aprovação Rápida</h3>
+            <p>
+              Processo simplificado com aprovação expressa em até 24 horas para
+              a maioria dos casos.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-user-shield"></i>
+            <h3>Assessoria Completa</h3>
+            <p>
+              Acompanhamento personalizado em todas as etapas do processo, desde
+              a simulação até a liberação do crédito.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tipos de Financiamento -->
+      <section class="services" id="tipos">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Tipos de <span class="highlight">Financiamento</span></h2>
+          <p>Escolha a modalidade ideal para o seu objetivo</p>
+        </div>
+        <div class="cards-container">
+          <!-- Financiamento Imobiliário -->
+          <div class="card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-home"></i>
+            <h3>Financiamento Imobiliário</h3>
+            <p>
+              A solução para quem deseja adquirir ou construir seu imóvel sem
+              esperar anos.
+            </p>
+            <div class="card-details">
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Financie até 80% do valor do imóvel</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Prazos de até 35 anos para pagar</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Aceita uso do FGTS como parte do pagamento</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Opções de taxa fixa ou variável</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-buttons">
+              <a
+                href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Financiamento%20Imobiliário"
+                class="card-cta whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="imovel.html" class="card-cta">
+                <i class="fas fa-info-circle"></i> Mais Detalhes
+              </a>
+            </div>
+          </div>
+
+          <!-- Financiamento de Veículos -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-car"></i>
+            <h3>Financiamento de Veículos</h3>
+            <p>
+              Conquiste seu carro, moto ou caminhão novo ou usado com as
+              melhores condições.
+            </p>
+            <div class="card-details">
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Taxa a partir de 0,99% a.m.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Entrada a partir de 20% do valor</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Prazos flexíveis de até 60 meses</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Aceitação de veículos de até 10 anos</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-buttons">
+              <a
+                href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Financiamento%20de%20Veículos"
+                class="card-cta whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="automovel/index.html" class="card-cta">
+                <i class="fas fa-info-circle"></i> Mais Detalhes
+              </a>
+            </div>
+          </div>
+
+          <!-- Financiamento Empresarial -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-briefcase"></i>
+            <h3>Financiamento Empresarial</h3>
+            <p>
+              Soluções para empresas que buscam capital para investimentos,
+              expansão ou capital de giro.
+            </p>
+            <div class="card-details">
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Linhas de crédito para diversos fins</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Soluções para micro, pequenas e médias empresas</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Assessoria na escolha da melhor opção</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Condições especiais para clientes Syrah</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-buttons">
+              <a
+                href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Financiamento%20Empresarial"
+                class="card-cta whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="empresarial.html" class="card-cta">
+                <i class="fas fa-info-circle"></i> Mais Detalhes
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre financiamentos</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>
+                Quais documentos são necessários para solicitar um
+                financiamento?
+              </h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Para pessoa física, geralmente são necessários: documento de
+                identidade, CPF, comprovante de residência, comprovante de renda
+                e declaração de imposto de renda. Para pessoa jurídica: contrato
+                social, CNPJ, documentos dos sócios, balanço patrimonial e DRE
+                dos últimos exercícios. Documentos específicos podem variar
+                conforme o tipo de financiamento e instituição financeira.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Como funciona a análise de crédito para financiamento?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A análise de crédito avalia sua capacidade de pagamento
+                considerando fatores como renda, histórico de crédito,
+                comprometimento da renda com outras dívidas, estabilidade
+                profissional e garantias oferecidas. Cada instituição financeira
+                tem seus próprios critérios, mas geralmente esses são os
+                principais pontos avaliados.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Posso fazer financiamento com restrição no nome?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Embora seja mais difícil, existem opções para pessoas com
+                restrições no nome. Algumas instituições financeiras podem
+                aprovar financiamento mediante condições específicas, como
+                entrada maior, taxa de juros diferenciada ou apresentação de
+                garantias adicionais. Cada caso é analisado individualmente e
+                nossos consultores podem ajudar a encontrar a melhor solução.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Qual a diferença entre financiamento e leasing?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No financiamento, você já se torna proprietário do bem desde o
+                início, mesmo pagando parcelas. No leasing, trata-se de um
+                "aluguel com opção de compra", onde o bem permanece em nome da
+                instituição financeira durante todo o contrato, e ao final você
+                pode optar por adquiri-lo mediante um valor residual. O leasing
+                geralmente tem vantagens fiscais para empresas, enquanto o
+                financiamento oferece maior flexibilidade para pessoa física.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Pronto para começar?</h2>
+          <p>
+            Entre em contato conosco e obtenha as melhores condições de
+            financiamento do mercado.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20um%20financiamento%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Fazer Simulação</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../index.html">
+            <img
+              src="../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../index.html">Início</a>
+            <a href="../seguros/index-seguros.html">Seguros</a>
+            <a href="../consorcio/index-consorcio.html">Consórcio</a>
+            <a href="index-financiamento.html">Financiamento</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Financiamentos%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

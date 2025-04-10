@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Seguro Fiança</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../../index.html" class="nav-link">Início</a>
+
+          <div class="nav-item">
+            <a class="nav-link active">Seguros</a>
+            <div class="dropdown-menu">
+              <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+              <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+              <a href="../caminhao/index.html" class="dropdown-item"
+                >Seguro Caminhão</a
+              >
+              <a href="../residencial/index.html" class="dropdown-item"
+                >Seguro Residencial</a
+              >
+              <a href="../fianca/index.html" class="dropdown-item"
+                >Seguro Fiança</a
+              >
+              <a href="../index-seguros.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Consórcio</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../consorcio/automovel/index.html"
+                class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a
+                href="../../consorcio/index-consorcio.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Financiamento</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../financiamento/automovel/index.html"
+                class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a
+                href="../../financiamento/index-financiamento.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+          <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+          <a href="../caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../fianca/index.html" class="dropdown-item">Seguro Fiança</a>
+          <a href="../index-seguros.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../consorcio/automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../../consorcio/index-consorcio.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a
+            href="../../financiamento/automovel/index.html"
+            class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a
+            href="../../financiamento/index-financiamento.html"
+            class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../index-seguros.html">Seguros</a></li>
+            <li>Seguro Fiança</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Seguro <span class="highlight">Fiança</span></h1>
+            <p>
+              Locação sem fiador ou caução. Substitua as garantias tradicionais
+              e alugue seu imóvel com facilidade, rapidez e segurança.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Fiança%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">Solicitar Cotação</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Section -->
+      <section class="features-section" id="coberturas">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Principais</span></h2>
+          <p>As coberturas essenciais que o seu Seguro Fiança oferece</p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-file-invoice-dollar"></i>
+            <h3>Aluguel e Encargos</h3>
+            <p>
+              Cobertura para o não pagamento de aluguéis, IPTU, condomínio e
+              contas de consumo durante a vigência do contrato.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-gavel"></i>
+            <h3>Multas por Rescisão</h3>
+            <p>
+              Pagamento de multas contratuais em caso de rescisão antecipada
+              motivada pelo inquilino.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-paint-roller"></i>
+            <h3>Danos ao Imóvel</h3>
+            <p>
+              Proteção contra danos causados ao imóvel pelo inquilino durante o
+              período de locação, conforme a apólice.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Custas Judiciais</h3>
+            <p>
+              Cobertura para despesas com processos de despejo e ações de
+              cobrança relacionadas ao contrato de locação.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Adicionais -->
+      <section class="features-section" id="adicionais">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Vantagens <span class="highlight">Exclusivas</span></h2>
+          <p>
+            Benefícios que tornam o Seguro Fiança a melhor opção para locações
+          </p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-rocket"></i>
+            <h3>Aprovação Rápida</h3>
+            <p>
+              Processo simplificado de análise de crédito, com aprovação em até
+              48 horas em muitos casos, permitindo locações imediatas.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-user-shield"></i>
+            <h3>Sem Constrangimentos</h3>
+            <p>
+              Elimina a necessidade de pedir a familiares ou amigos que sejam
+              fiadores, mantendo suas relações pessoais intactas.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Capital Preservado</h3>
+            <p>
+              Sem necessidade de depósito caução, mantendo seu dinheiro livre
+              para outras necessidades, como mobília e mudança.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-building"></i>
+            <h3>Múltiplos Imóveis</h3>
+            <p>
+              Possibilidade de alugar diversos imóveis simultaneamente sem
+              comprometer a renda ou necessitar de múltiplos fiadores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planos Section -->
+      <section class="pricing-section" id="planos">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nossos <span class="highlight">Planos</span></h2>
+          <p>Escolha o plano que melhor atende às suas necessidades</p>
+        </div>
+        <div class="pricing-container">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Básico</h3>
+            </div>
+            <div class="price">
+              <span>A partir de 1,5x o valor do aluguel*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura de aluguel (3 meses)
+                </li>
+                <li><i class="fas fa-check"></i> IPTU e condomínio</li>
+                <li><i class="fas fa-check"></i> Multa por rescisão</li>
+                <li><i class="fas fa-check"></i> Custas judiciais básicas</li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Danos ao imóvel
+                </li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Contas de consumo
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Básico%20de%20Seguro%20Fiança%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+
+          <div class="pricing-card featured" data-aos="fade-up">
+            <div class="card-tag">Mais Popular</div>
+            <div class="pricing-header">
+              <h3>Plano Completo</h3>
+            </div>
+            <div class="price">
+              <span>A partir de 2x o valor do aluguel*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura de aluguel (6 meses)
+                </li>
+                <li><i class="fas fa-check"></i> IPTU e condomínio</li>
+                <li><i class="fas fa-check"></i> Multa por rescisão</li>
+                <li><i class="fas fa-check"></i> Custas judiciais completas</li>
+                <li><i class="fas fa-check"></i> Danos ao imóvel</li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Contas de consumo
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Completo%20de%20Seguro%20Fiança%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Premium</h3>
+            </div>
+            <div class="price">
+              <span>A partir de 2,5x o valor do aluguel*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura de aluguel (12 meses)
+                </li>
+                <li><i class="fas fa-check"></i> IPTU e condomínio</li>
+                <li><i class="fas fa-check"></i> Multa por rescisão</li>
+                <li><i class="fas fa-check"></i> Custas judiciais completas</li>
+                <li><i class="fas fa-check"></i> Danos ao imóvel</li>
+                <li><i class="fas fa-check"></i> Contas de consumo</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Premium%20de%20Seguro%20Fiança%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+        </div>
+        <div class="pricing-note" data-aos="fade-up">
+          <p>
+            * Valores aproximados. O preço final dependerá da análise de
+            crédito, valor do aluguel, prazo do contrato e histórico do
+            locatário. O pagamento pode ser parcelado.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre o seguro fiança locatícia</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Como funciona a análise de crédito para o seguro fiança?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A análise de crédito avalia seu histórico financeiro,
+                comprometimento de renda, estabilidade profissional e outros
+                fatores. Geralmente, é necessário comprovar renda de pelo menos
+                3 vezes o valor do aluguel e não ter restrições graves nos
+                órgãos de proteção ao crédito. O processo é mais rápido e menos
+                burocrático que a aprovação de fiador, podendo ser concluído em
+                24 a 48 horas em muitos casos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Quais documentos são necessários para contratar o seguro?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Geralmente são necessários: documento de identidade, CPF,
+                comprovante de residência atual, comprovante de renda (3 últimos
+                holerites ou declaração de imposto de renda), carteira de
+                trabalho ou contrato social (para autônomos/empresários) e a
+                proposta de seguro preenchida. Para empresas, são solicitados
+                também os documentos da empresa e de seus sócios, além do
+                contrato social e demonstrativos financeiros.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>O seguro fiança pode ser substituído durante a locação?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, é possível substituir o seguro fiança por outra modalidade
+                de garantia durante a vigência do contrato, desde que haja
+                concordância do locador. Da mesma forma, também é possível
+                substituir um fiador tradicional pelo seguro fiança. Em ambos os
+                casos, será necessário um aditivo contratual e nova análise de
+                crédito. Consulte-nos para verificar as condições específicas do
+                seu caso.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Como funciona a renovação do seguro fiança?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A renovação do seguro fiança é feita anualmente, acompanhando a
+                vigência do contrato de locação. O processo é simplificado, sem
+                necessidade de nova análise de crédito completa, desde que o
+                inquilino mantenha bom histórico de pagamentos. O valor do
+                prêmio pode ser ajustado conforme a variação do aluguel e o
+                perfil atual do segurado. Em caso de renovação antecipada do
+                contrato de locação, é importante informar a seguradora para
+                ajustar a cobertura adequadamente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Alugue seu imóvel sem burocracia</h2>
+          <p>
+            Solicite uma cotação personalizada e conheça as opções de seguro
+            fiança que simplificam o processo de locação.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Fiança%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Solicitar Cotação</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../../index.html">Início</a>
+            <a href="../index-seguros.html">Seguros</a>
+            <a href="../../consorcio/index-consorcio.html">Consórcio</a>
+            <a href="../../financiamento/index-financiamento.html"
+              >Financiamento</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Fiança%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Financiamento de Automóvel</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../../index.html" class="nav-link">Início</a>
+
+          <div class="nav-item">
+            <a class="nav-link">Seguros</a>
+            <div class="dropdown-menu">
+              <a href="../../seguros/auto/index.html" class="dropdown-item"
+                >Seguro Auto</a
+              >
+              <a href="../../seguros/moto/index.html" class="dropdown-item"
+                >Seguro Moto</a
+              >
+              <a href="../../seguros/caminhao/index.html" class="dropdown-item"
+                >Seguro Caminhão</a
+              >
+              <a
+                href="../../seguros/residencial/index.html"
+                class="dropdown-item"
+                >Seguro Residencial</a
+              >
+              <a href="../../seguros/fianca/index.html" class="dropdown-item"
+                >Seguro Fiança</a
+              >
+              <a href="../../seguros/index-seguros.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Consórcio</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../consorcio/automovel/index.html"
+                class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a
+                href="../../consorcio/index-consorcio.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link active">Financiamento</a>
+            <div class="dropdown-menu">
+              <a href="../automovel/index.html" class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a href="../index-financiamento.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../seguros/auto/index.html" class="dropdown-item"
+            >Seguro Auto</a
+          >
+          <a href="../../seguros/moto/index.html" class="dropdown-item"
+            >Seguro Moto</a
+          >
+          <a href="../../seguros/caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../../seguros/residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../../seguros/fianca/index.html" class="dropdown-item"
+            >Seguro Fiança</a
+          >
+          <a href="../../seguros/index-seguros.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../consorcio/automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../../consorcio/index-consorcio.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../automovel/index.html" class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a href="../index-financiamento.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../index-financiamento.html">Financiamento</a></li>
+            <li>Financiamento de Automóvel</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Financiamento de <span class="highlight">Automóvel</span></h1>
+            <p>
+              Realize o sonho do seu carro novo ou usado com as melhores
+              condições do mercado. Taxas competitivas, aprovação rápida e
+              entrada facilitada.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20simulação%20de%20Financiamento%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">Simular Financiamento</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vantagens Section -->
+      <section class="features-section" id="vantagens">
+        <div class="section-header" data-aos="fade-up">
+          <h2>
+            Vantagens do <span class="highlight">Financiamento Auto</span>
+          </h2>
+          <p>Descubra por que financiar seu automóvel com a Syrah Corretora</p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-bolt"></i>
+            <h3>Liberação Imediata</h3>
+            <p>
+              Crédito disponível em até 48 horas após a aprovação, permitindo
+              que você saia dirigindo seu novo carro rapidamente.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-percentage"></i>
+            <h3>Taxas Atrativas</h3>
+            <p>
+              Taxas a partir de 0,99% ao mês, com as melhores condições
+              negociadas com diversas instituições financeiras.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Prazos Flexíveis</h3>
+            <p>
+              Prazos de financiamento de até 60 meses, adequando a parcela ao
+              seu orçamento mensal.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-shield-alt"></i>
+            <h3>Entrada Facilitada</h3>
+            <p>
+              Possibilidade de entrada a partir de 10% do valor do veículo,
+              facilitando a aquisição.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modalidades Section -->
+      <section class="pricing-section" id="modalidades">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nossas <span class="highlight">Modalidades</span></h2>
+          <p>Escolha o plano que melhor atende às suas necessidades</p>
+        </div>
+        <div class="pricing-container">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Veículos Novos</h3>
+            </div>
+            <div class="price">
+              <span>Taxa a partir de 0,99% a.m.*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Entrada a partir de 10%</li>
+                <li><i class="fas fa-check"></i> Parcelas em até 60 meses</li>
+                <li><i class="fas fa-check"></i> Documentação simplificada</li>
+                <li><i class="fas fa-check"></i> Aprovação em até 24 horas</li>
+                <li><i class="fas fa-check"></i> Carência de até 60 dias</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20um%20Financiamento%20para%20Veículo%20Novo%20com%20a%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Simular Agora</a
+            >
+          </div>
+
+          <div class="pricing-card featured" data-aos="fade-up">
+            <div class="card-tag">Mais Popular</div>
+            <div class="pricing-header">
+              <h3>Veículos Seminovos</h3>
+            </div>
+            <div class="price">
+              <span>Taxa a partir de 1,29% a.m.*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Entrada a partir de 20%</li>
+                <li><i class="fas fa-check"></i> Parcelas em até 60 meses</li>
+                <li><i class="fas fa-check"></i> Para veículos até 5 anos</li>
+                <li><i class="fas fa-check"></i> Aprovação em até 48 horas</li>
+                <li><i class="fas fa-check"></i> Carência de até 45 dias</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20um%20Financiamento%20para%20Veículo%20Seminovo%20com%20a%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Simular Agora</a
+            >
+          </div>
+
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Veículos Usados</h3>
+            </div>
+            <div class="price">
+              <span>Taxa a partir de 1,59% a.m.*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Entrada a partir de 30%</li>
+                <li><i class="fas fa-check"></i> Parcelas em até 48 meses</li>
+                <li><i class="fas fa-check"></i> Para veículos até 10 anos</li>
+                <li><i class="fas fa-check"></i> Aprovação em até 72 horas</li>
+                <li><i class="fas fa-check"></i> Carência de até 30 dias</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20um%20Financiamento%20para%20Veículo%20Usado%20com%20a%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Simular Agora</a
+            >
+          </div>
+        </div>
+        <div class="pricing-note" data-aos="fade-up">
+          <p>
+            * Taxas sujeitas a análise de crédito. O valor final dependerá do
+            perfil do cliente, modelo do veículo e condições da operação.
+          </p>
+        </div>
+      </section>
+
+      <!-- Processo Section -->
+      <section class="process-section" id="processo">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Como <span class="highlight">Funciona</span></h2>
+          <p>Conheça o passo a passo para financiar seu automóvel</p>
+        </div>
+        <div class="process-container">
+          <div class="process-item" data-aos="fade-up">
+            <div class="process-number">1</div>
+            <div class="process-content">
+              <h3>Simulação</h3>
+              <p>
+                Entre em contato conosco para simular as condições de
+                financiamento de acordo com seu perfil e veículo desejado.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-number">2</div>
+            <div class="process-content">
+              <h3>Análise de Crédito</h3>
+              <p>
+                Avaliamos seu perfil de crédito e apresentamos as melhores
+                opções de instituições financeiras para o seu caso.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-number">3</div>
+            <div class="process-content">
+              <h3>Aprovação</h3>
+              <p>
+                Após a aprovação do crédito, orientamos sobre toda a
+                documentação necessária e preparamos o contrato.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-number">4</div>
+            <div class="process-content">
+              <h3>Liberação do Crédito</h3>
+              <p>
+                Com a documentação aprovada, o crédito é liberado diretamente
+                para a concessionária ou vendedor do veículo.
+              </p>
+            </div>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="process-number">5</div>
+            <div class="process-content">
+              <h3>Retirada do Veículo</h3>
+              <p>
+                Após a liberação do crédito, você já pode retirar seu automóvel
+                e começar a aproveitar enquanto paga as parcelas mensais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre financiamento de automóvel</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>
+                Quais documentos são necessários para financiar um veículo?
+              </h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Geralmente são necessários: documento de identidade, CPF,
+                comprovante de residência, comprovante de renda (últimos 3
+                meses), declaração de imposto de renda (se aplicável), certidão
+                de estado civil e CNH. Para veículos usados, também serão
+                necessários documentos do veículo como DUT e comprovante de
+                propriedade do vendedor.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Posso financiar um veículo com restrições no CPF?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                É possível, mas depende do tipo e valor da restrição. Algumas
+                instituições financeiras possuem linhas especiais para
+                negativados, geralmente exigindo uma entrada maior e com taxas
+                diferenciadas. Cada caso é analisado individualmente, e nossa
+                equipe pode ajudar a encontrar a melhor solução para sua
+                situação.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>É possível quitar o financiamento antecipadamente?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, é possível quitar o financiamento antes do prazo final. Ao
+                fazer isso, você geralmente obtém descontos nos juros das
+                parcelas futuras. Existem duas modalidades: quitação total
+                (pagamento do saldo devedor completo) ou amortização (pagamento
+                parcial que reduz o valor das prestações ou o prazo total).
+                Consulte-nos para calcular as condições específicas do seu caso.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Posso transferir o financiamento para outra pessoa?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, é possível transferir o financiamento para outra pessoa
+                através do processo chamado "Transferência de Dívida" ou "Cessão
+                de Direitos". No entanto, a instituição financeira precisará
+                aprovar o novo tomador do financiamento, que passará por uma
+                análise de crédito. Algumas financeiras cobram uma taxa para
+                essa transferência. O processo não é automático e depende da
+                aprovação da instituição.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Realize o sonho do seu automóvel</h2>
+          <p>
+            Solicite uma simulação personalizada e descubra as melhores
+            condições de financiamento para o seu novo veículo.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20simulação%20de%20Financiamento%20de%20Automóvel%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Simular Financiamento</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../../index.html">Início</a>
+            <a href="../../seguros/index-seguros.html">Seguros</a>
+            <a href="../../consorcio/index-consorcio.html">Consórcio</a>
+            <a href="../index-financiamento.html">Financiamento</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Financiamento%20de%20Automóvel%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

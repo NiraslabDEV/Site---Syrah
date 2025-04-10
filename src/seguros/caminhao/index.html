@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Seguro Caminhão</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../../index.html" class="nav-link">Início</a>
+
+          <div class="nav-item">
+            <a class="nav-link active">Seguros</a>
+            <div class="dropdown-menu">
+              <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+              <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+              <a href="../caminhao/index.html" class="dropdown-item"
+                >Seguro Caminhão</a
+              >
+              <a href="../residencial/index.html" class="dropdown-item"
+                >Seguro Residencial</a
+              >
+              <a href="../fianca/index.html" class="dropdown-item"
+                >Seguro Fiança</a
+              >
+              <a href="../index-seguros.html" class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Consórcio</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../consorcio/automovel/index.html"
+                class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a
+                href="../../consorcio/index-consorcio.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link">Financiamento</a>
+            <div class="dropdown-menu">
+              <a
+                href="../../financiamento/automovel/index.html"
+                class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a
+                href="../../financiamento/index-financiamento.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../auto/index.html" class="dropdown-item">Seguro Auto</a>
+          <a href="../moto/index.html" class="dropdown-item">Seguro Moto</a>
+          <a href="../caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../fianca/index.html" class="dropdown-item">Seguro Fiança</a>
+          <a href="../index-seguros.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../../consorcio/automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="../../consorcio/imovel/index.html" class="dropdown-item"
+            >Consórcio Imóvel</a
+          >
+          <a href="../../consorcio/index-consorcio.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a
+            href="../../financiamento/automovel/index.html"
+            class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a
+            href="../../financiamento/index-financiamento.html"
+            class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../index-seguros.html">Seguros</a></li>
+            <li>Seguro Caminhão</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Seguro <span class="highlight">Caminhão</span></h1>
+            <p>
+              Proteja seu investimento e sua carga com um seguro específico para
+              veículos de transporte. Soluções completas para transportadores
+              autônomos e empresas.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Caminhão%20com%20a%20Syrah%20Corretora"
+              class="btn-neon"
+            >
+              <span class="btn-text">Solicitar Cotação</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Section -->
+      <section class="features-section" id="coberturas">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Principais</span></h2>
+          <p>As coberturas essenciais que o seu Seguro Caminhão precisa ter</p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-truck"></i>
+            <h3>Colisão</h3>
+            <p>
+              Cobertura para danos ao seu caminhão em caso de colisão,
+              capotamento ou tombamento durante o transporte.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-shield-alt"></i>
+            <h3>Roubo e Furto</h3>
+            <p>
+              Proteção em caso de roubo ou furto do seu caminhão, com
+              indenização pelo valor contratado na apólice.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-user-shield"></i>
+            <h3>Danos a Terceiros</h3>
+            <p>
+              Cobertura para danos materiais e corporais causados a terceiros em
+              acidentes de trânsito envolvendo seu caminhão.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-fire-alt"></i>
+            <h3>Incêndio</h3>
+            <p>
+              Proteção contra danos causados por incêndio, raio e explosão no
+              seu veículo de carga.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coberturas Adicionais -->
+      <section class="features-section" id="adicionais">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Coberturas <span class="highlight">Adicionais</span></h2>
+          <p>
+            Personalize seu seguro com coberturas complementares para caminhões
+          </p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-box"></i>
+            <h3>RCF-DC</h3>
+            <p>
+              Responsabilidade Civil Facultativa - Desaparecimento de Carga, que
+              protege contra prejuízos relacionados ao roubo de mercadorias
+              transportadas.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-tools"></i>
+            <h3>Assistência 24h</h3>
+            <p>
+              Serviços de guincho sem limite de quilometragem, socorro mecânico,
+              troca de pneus e assistência para o caminhoneiro em viagens.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-wrench"></i>
+            <h3>Equipamentos</h3>
+            <p>
+              Cobertura para acessórios e equipamentos como guinchos, munck,
+              baú, carroceria, sistema de refrigeração e outros implementos.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-user-md"></i>
+            <h3>APP</h3>
+            <p>
+              Acidentes Pessoais de Passageiros - cobertura para despesas
+              médicas e hospitalares, invalidez ou morte de ocupantes do
+              veículo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planos Section -->
+      <section class="pricing-section" id="planos">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nossos <span class="highlight">Planos</span></h2>
+          <p>Escolha o plano que melhor atende às suas necessidades</p>
+        </div>
+        <div class="pricing-container">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Básico</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 180/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura contra roubo e furto
+                </li>
+                <li><i class="fas fa-check"></i> Cobertura contra incêndio</li>
+                <li><i class="fas fa-check"></i> Danos a terceiros básico</li>
+                <li><i class="fas fa-check"></i> Assistência 24h (200km)</li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> RCF-DC
+                </li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Cobertura para equipamentos
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Básico%20de%20Seguro%20Caminhão%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+
+          <div class="pricing-card featured" data-aos="fade-up">
+            <div class="card-tag">Mais Popular</div>
+            <div class="pricing-header">
+              <h3>Plano Completo</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 280/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li><i class="fas fa-check"></i> Roubo, furto e incêndio</li>
+                <li><i class="fas fa-check"></i> Danos a terceiros ampliado</li>
+                <li>
+                  <i class="fas fa-check"></i> Assistência 24h (ilimitada)
+                </li>
+                <li><i class="fas fa-check"></i> RCF-DC básico</li>
+                <li class="not-included">
+                  <i class="fas fa-times"></i> Cobertura para equipamentos
+                  especiais
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Completo%20de%20Seguro%20Caminhão%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header">
+              <h3>Plano Premium</h3>
+            </div>
+            <div class="price">
+              <span>A partir de R$ 390/mês*</span>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li><i class="fas fa-check"></i> Cobertura contra colisão</li>
+                <li><i class="fas fa-check"></i> Roubo, furto e incêndio</li>
+                <li><i class="fas fa-check"></i> Danos a terceiros ampliado</li>
+                <li><i class="fas fa-check"></i> Assistência 24h Premium</li>
+                <li><i class="fas fa-check"></i> RCF-DC ampliado</li>
+                <li>
+                  <i class="fas fa-check"></i> Cobertura para equipamentos
+                  especiais
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Premium%20de%20Seguro%20Caminhão%20da%20Syrah%20Corretora"
+              class="pricing-btn"
+              >Solicitar Cotação</a
+            >
+          </div>
+        </div>
+        <div class="pricing-note" data-aos="fade-up">
+          <p>
+            * Valores aproximados. O preço final dependerá do modelo do
+            caminhão, ano, utilização, região de circulação, categoria de carga
+            e coberturas selecionadas.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre o seguro caminhão</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>O seguro caminhão cobre a carga transportada?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O seguro de caminhão tradicional não cobre a carga transportada.
+                Para isso, é necessário contratar o seguro de Responsabilidade
+                Civil do Transportador Rodoviário de Carga (RCTR-C) e outros
+                seguros específicos como o RCF-DC (Responsabilidade Civil
+                Facultativa - Desaparecimento de Carga). Consulte nossos
+                especialistas para entender quais apólices você precisa para
+                proteger tanto o veículo quanto a carga.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Qual a importância do RCF-DC no seguro de caminhão?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O RCF-DC (Responsabilidade Civil Facultativa - Desaparecimento
+                de Carga) é uma cobertura essencial para transportadores, pois
+                protege contra prejuízos relacionados ao roubo ou furto da carga
+                transportada. Sem esta cobertura, o transportador pode ser
+                responsabilizado pelo valor total da mercadoria em caso de
+                roubo, o que representa um risco financeiro significativo,
+                especialmente para cargas de alto valor.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Implementos e equipamentos do caminhão estão cobertos?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Os implementos e equipamentos (como guindastes, baús,
+                carrocerias especiais, sistemas de refrigeração) não são
+                automaticamente cobertos pelo seguro básico de caminhão. É
+                necessário contratar uma cobertura adicional específica para
+                equipamentos, informando detalhadamente cada item e seu valor.
+                Esta cobertura é importante para garantir que todo o seu
+                investimento esteja protegido em caso de sinistro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Como o rastreador influencia no valor do seguro?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A instalação de um rastreador homologado pela seguradora
+                geralmente resulta em descontos significativos no prêmio do
+                seguro, podendo chegar a 20% ou mais. Isso ocorre porque o
+                rastreador aumenta as chances de recuperação do veículo em caso
+                de roubo e permite monitoramento em tempo real. Algumas
+                seguradoras exigem rastreadores específicos para determinados
+                tipos de caminhões ou cargas, especialmente para veículos de
+                alto valor ou que transportam cargas valiosas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Proteja seu negócio de transporte</h2>
+          <p>
+            Solicite uma cotação personalizada e descubra como podemos oferecer
+            a melhor proteção para seu caminhão e operação de transporte.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20de%20Seguro%20Caminhão%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Solicitar Cotação</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../../index.html">
+            <img
+              src="../../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../../index.html">Início</a>
+            <a href="../index-seguros.html">Seguros</a>
+            <a href="../../consorcio/index-consorcio.html">Consórcio</a>
+            <a href="../../financiamento/index-financiamento.html"
+              >Financiamento</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Seguro%20Caminhão%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

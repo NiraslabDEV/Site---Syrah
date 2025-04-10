@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrah Corretora - Consórcio</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <a href="../index.html">
+            <img src="../assets/logo.png" alt="Syrah Corretora" class="logo" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-link">Início</a>
+          <a href="../seguros/index-seguros.html" class="nav-link">Seguros</a>
+          <div class="nav-item">
+            <a class="nav-link">Consórcio</a>
+            <div class="dropdown-menu">
+              <a href="automovel/index.html" class="dropdown-item"
+                >Consórcio Auto</a
+              >
+              <a href="imovel/index.html" class="dropdown-item"
+                >Consórcio Imóvel</a
+              >
+              <a href="index-consorcio.html" class="dropdown-item">Ver Todos</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link dropdown-toggle">
+              Financiamento
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a
+                href="../financiamento/automovel/index.html"
+                class="dropdown-item"
+                >Financiamento Auto</a
+              >
+              <a
+                href="../financiamento/index-financiamento.html"
+                class="dropdown-item"
+                >Ver Todos</a
+              >
+            </div>
+          </div>
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <a href="../index.html" class="nav-link">Início</a>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Seguros
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../seguros/auto/index.html" class="dropdown-item"
+            >Seguro Auto</a
+          >
+          <a href="../seguros/moto/index.html" class="dropdown-item"
+            >Seguro Moto</a
+          >
+          <a href="../seguros/caminhao/index.html" class="dropdown-item"
+            >Seguro Caminhão</a
+          >
+          <a href="../seguros/residencial/index.html" class="dropdown-item"
+            >Seguro Residencial</a
+          >
+          <a href="../seguros/fianca/index.html" class="dropdown-item"
+            >Seguro Fiança</a
+          >
+          <a href="../seguros/index-seguros.html" class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle active">
+          Consórcio
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="automovel/index.html" class="dropdown-item"
+            >Consórcio Auto</a
+          >
+          <a href="imovel/index.html" class="dropdown-item">Consórcio Imóvel</a>
+          <a href="index-consorcio.html" class="dropdown-item">Ver Todos</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link dropdown-toggle">
+          Financiamento
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../financiamento/automovel/index.html" class="dropdown-item"
+            >Financiamento Auto</a
+          >
+          <a
+            href="../financiamento/index-financiamento.html"
+            class="dropdown-item"
+            >Ver Todos</a
+          >
+        </div>
+      </div>
+
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <!-- Hero Section com fundo mais claro e conteúdo centralizado -->
+      <section class="hero hero-light" id="hero">
+        <div class="hero-content centered">
+          <div class="hero-text" data-aos="fade-up">
+            <h1>Consórcio <span class="highlight">Inteligente</span></h1>
+            <p>
+              Planeje a conquista do seu sonho com economia e segurança. O
+              consórcio da Syrah Corretora oferece parcelas que cabem no seu
+              bolso e a garantia de uma administração confiável.
+            </p>
+            <a
+              href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Consórcio"
+              class="btn-neon"
+            >
+              <span class="btn-text">Simular Consórcio</span>
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefícios Section -->
+      <section class="features-section" id="beneficios">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Benefícios do <span class="highlight">Consórcio</span></h2>
+          <p>
+            Conheça as vantagens de escolher o consórcio como forma de aquisição
+          </p>
+        </div>
+        <div class="features-container">
+          <div class="feature-item" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-percentage"></i>
+            <h3>Sem Juros</h3>
+            <p>
+              Diferente do financiamento, o consórcio não tem juros, apenas taxa
+              de administração, tornando-o mais econômico a longo prazo.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Parcelas Flexíveis</h3>
+            <p>
+              Adapte o valor das parcelas de acordo com sua capacidade
+              financeira, escolhendo prazos que se encaixam no seu orçamento.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-shield-alt"></i>
+            <h3>Segurança</h3>
+            <p>
+              Administradoras regulamentadas pelo Banco Central garantem a
+              segurança do seu investimento durante todo o prazo do consórcio.
+            </p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow"></div>
+            <i class="fas fa-handshake"></i>
+            <h3>Poder de Compra</h3>
+            <p>
+              Ao ser contemplado, você recebe o valor total do crédito,
+              garantindo poder de negociação à vista com fornecedores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tipos de Consórcio -->
+      <section class="services" id="tipos">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Tipos de <span class="highlight">Consórcio</span></h2>
+          <p>Encontre a modalidade ideal para realizar seu sonho</p>
+        </div>
+        <div class="cards-container">
+          <!-- Consórcio Imóveis -->
+          <div class="card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <i class="fas fa-home"></i>
+            <h3>Consórcio Imobiliário</h3>
+            <p>
+              A melhor opção para conquistar sua casa própria, apartamento ou
+              investir em imóveis.
+            </p>
+            <div class="card-details">
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Créditos de R$ 100 mil a R$ 1 milhão</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Prazos de até 200 meses</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Utilize para compra, construção ou reforma</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Possibilidade de lance e antecipação</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-buttons">
+              <a
+                href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Consórcio%20Imobiliário"
+                class="card-cta whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="imovel.html" class="card-cta">
+                <i class="fas fa-info-circle"></i> Mais Detalhes
+              </a>
+            </div>
+          </div>
+
+          <!-- Consórcio Veículos -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <i class="fas fa-car"></i>
+            <h3>Consórcio de Veículos</h3>
+            <p>
+              Planeje a compra do seu automóvel, moto, caminhão ou veículo
+              recreativo com tranquilidade.
+            </p>
+            <div class="card-details">
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Créditos de R$ 30 mil a R$ 300 mil</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Prazos de até 80 meses</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Para carros novos e usados (até 8 anos)</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Taxas administrativas competitivas</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-buttons">
+              <a
+                href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Consórcio%20de%20Veículos"
+                class="card-cta whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="veiculo.html" class="card-cta">
+                <i class="fas fa-info-circle"></i> Mais Detalhes
+              </a>
+            </div>
+          </div>
+
+          <!-- Consórcio Serviços -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <i class="fas fa-briefcase"></i>
+            <h3>Consórcio de Serviços</h3>
+            <p>
+              Ideal para planejamento de viagens, cirurgias, estudos, festas e
+              projetos especiais.
+            </p>
+            <div class="card-details">
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Créditos de R$ 5 mil a R$ 100 mil</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Prazos de até 60 meses</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Flexibilidade na utilização do crédito</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i
+                  ><span>Prestações que cabem no seu orçamento</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-buttons">
+              <a
+                href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Consórcio%20de%20Serviços"
+                class="card-cta whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="servico.html" class="card-cta">
+                <i class="fas fa-info-circle"></i> Mais Detalhes
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+          <p>Tire suas dúvidas sobre consórcios</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>O que é consórcio e como funciona?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Consórcio é um sistema de compra programada, onde um grupo de
+                pessoas se reúne com o objetivo comum de adquirir bens ou
+                serviços. Os participantes contribuem com parcelas mensais que
+                formam um fundo comum, utilizado para contemplar os consorciados
+                mensalmente, seja por sorteio ou lance.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Qual a diferença entre consórcio e financiamento?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A principal diferença é que no financiamento você adquire o bem
+                imediatamente e paga juros sobre o valor financiado, enquanto no
+                consórcio você contribui com parcelas mensais que não incluem
+                juros, apenas taxa de administração, e recebe o bem quando for
+                contemplado.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Como funciona a contemplação no consórcio?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                A contemplação ocorre por meio de sorteios mensais ou lances
+                (oferta de antecipação de parcelas). Quando contemplado, o
+                consorciado recebe o valor integral do crédito contratado para
+                adquirir o bem ou serviço desejado, continuando a pagar as
+                parcelas restantes até o fim do plano.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">
+              <h3>Posso usar o consórcio para qualquer finalidade?</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, desde que esteja dentro da categoria contratada. Por
+                exemplo, com um consórcio imobiliário você pode comprar,
+                construir ou reformar imóveis. Com consórcio de serviços, pode
+                utilizá-lo para festas, viagens, estudos ou procedimentos
+                médicos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+          <h2>Pronto para realizar seu sonho?</h2>
+          <p>
+            Entre em contato conosco e simule seu consórcio com as melhores
+            condições do mercado.
+          </p>
+          <a
+            href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20simular%20um%20consórcio%20com%20a%20Syrah%20Corretora"
+            class="btn-neon"
+          >
+            <span class="btn-text">Fazer Simulação</span>
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="../index.html">
+            <img
+              src="../assets/logo.png"
+              alt="Syrah Corretora"
+              class="footer-logo"
+            />
+          </a>
+          <p>Transformando sonhos em realidade com segurança e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <a href="../index.html">Início</a>
+            <a href="../seguros/index-seguros.html">Seguros</a>
+            <a href="index-consorcio.html">Consórcio</a>
+            <a href="../financiamento/index-financiamento.html"
+              >Financiamento</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <a href="tel:1123624860"
+              ><i class="fas fa-phone"></i> (11) 2362-4860</a
+            >
+            <a href="mailto:contato@syrahcorretora.com"
+              ><i class="fas fa-envelope"></i> contato@syrahcorretora.com</a
+            >
+          </div>
+          <div class="footer-section">
+            <h4>Endereço</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Dr. Gastão Vidigal, 1132
+              - Conj A 711- Vila Leopoldina - Edificio Soho Office
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Syrah Corretora. Todos os direitos reservados.</p>
+        <div class="credits">
+          <p>
+            Site Produzido por
+            <a href="https://seogo.com.br/" target="_blank">Seogo</a> em
+            parceria com a
+            <a href="https://leapfrogtech.netlify.app/" target="_blank"
+              >LeapFrogTech</a
+            >
+            - Transformação Digital em Tempo Recorde
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="floating-buttons-right">
+      <a
+        href="https://wa.me/551123624860?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Consórcios%20da%20Syrah%20Corretora"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+        aria-label="Contato via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="floating-buttons-left">
+      <a
+        href="tel:1123624860"
+        class="floating-btn phone-btn"
+        aria-label="Ligar para nós"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inicializa o tema
+      initTheme();
+
+      // Adiciona funcionalidade às perguntas frequentes
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+
+          const icon = question.querySelector("i");
+          if (faqItem.classList.contains("active")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
