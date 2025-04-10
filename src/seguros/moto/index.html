@@ -575,7 +575,7 @@
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="../../scripts/main.js"></script>
     <script>
       // Inicializa as animações AOS
       AOS.init({
@@ -583,24 +583,45 @@
         once: true,
       });
 
-      // Inicializa o tema
-      initTheme();
+      // Garante que o código só será executado após o DOM estar completamente carregado
+      document.addEventListener('DOMContentLoaded', function() {
+        // Inicializa o tema
+        initTheme();
+        
+        // Setup do menu mobile
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        }
+        
+        if (mobileMenuOverlay) {
+          mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Setup dos dropdowns do menu mobile
+        setupMobileDropdowns();
+        
+        // Inicializa FAQ se existir na página
+        if (document.querySelector('.faq-item')) {
+          // Adiciona funcionalidade às perguntas frequentes
+          document.querySelectorAll(".faq-question").forEach((question) => {
+            question.addEventListener("click", () => {
+              const faqItem = question.parentElement;
+              faqItem.classList.toggle("active");
 
-      // Adiciona funcionalidade às perguntas frequentes
-      document.querySelectorAll(".faq-question").forEach((question) => {
-        question.addEventListener("click", () => {
-          const faqItem = question.parentElement;
-          faqItem.classList.toggle("active");
-
-          const icon = question.querySelector("i");
-          if (faqItem.classList.contains("active")) {
-            icon.classList.remove("fa-plus");
-            icon.classList.add("fa-minus");
-          } else {
-            icon.classList.remove("fa-minus");
-            icon.classList.add("fa-plus");
-          }
-        });
+              const icon = question.querySelector("i");
+              if (faqItem.classList.contains("active")) {
+                icon.classList.remove("fa-plus");
+                icon.classList.add("fa-minus");
+              } else {
+                icon.classList.remove("fa-minus");
+                icon.classList.add("fa-plus");
+              }
+            });
+          });
+        }
       });
     </script>
   </body>
