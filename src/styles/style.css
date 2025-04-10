@@ -189,7 +189,89 @@ footer,
 
 @media (max-width: 768px) {
   .mobile-menu {
-    width: 80%;
+    display: flex;
+  }
+
+  .mobile-menu .dropdown-menu {
+    display: none;
+  }
+
+  .mobile-menu .nav-item.active .dropdown-menu {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.mobile-menu .nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 0.75rem 0;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.mobile-menu .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.mobile-menu .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu .dropdown-icon {
+  transition: transform 0.3s;
+  margin-left: 0.5rem;
+}
+
+.mobile-menu .nav-item.active .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.mobile-menu .dropdown-item {
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  border-left: 2px solid var(--primary-color);
+}
+
+.mobile-menu .theme-toggle {
+  margin-top: 1.5rem;
+  padding: 0.8rem 0;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu .theme-toggle i {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
   }
 }
 
@@ -218,6 +300,7 @@ body {
   padding: 1rem 0;
   transition: all 0.3s ease;
   box-sizing: border-box;
+  overflow-x: visible;
 }
 
 .nav-container {
@@ -229,6 +312,7 @@ body {
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 .logo-container {
@@ -254,11 +338,13 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+  overflow: visible;
 }
 
 /* Estilos para o dropdown do menu de navegação */
 .nav-item {
   position: relative;
+  overflow: visible;
 }
 
 .nav-link {
@@ -268,6 +354,7 @@ body {
   transition: color 0.3s;
   position: relative;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -289,27 +376,63 @@ body {
   color: var(--primary-color);
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--nav-background);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  min-width: 200px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 1001;
-  padding: 0.5rem 0;
-  margin-top: 10px;
+/* Configuração do dropdown para desktop */
+@media (min-width: 769px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--nav-background);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 1001;
+    padding: 0.5rem 0;
+    margin-top: 10px;
+    display: block;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    height: 10px;
+    width: 10px;
+    background: var(--nav-background);
+    transform: rotate(45deg);
+    z-index: -1;
+  }
 }
 
-.nav-item:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* Mantém configuração original para mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    z-index: 1;
+    padding: 0;
+    margin-top: 0;
+    display: none;
+  }
 }
 
 .dropdown-item {
@@ -325,18 +448,6 @@ body {
   background-color: var(--section-background);
   color: var(--primary-color);
   padding-left: 1.5rem;
-}
-
-.dropdown-menu::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 20px;
-  height: 10px;
-  width: 10px;
-  background: var(--nav-background);
-  transform: rotate(45deg);
-  z-index: -1;
 }
 
 .nav-link.active {
@@ -386,7 +497,7 @@ body {
   overflow: hidden;
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -394,6 +505,7 @@ body {
   position: relative;
   text-align: center;
   margin-top: 80px; /* Espaço para o header fixo */
+  min-height: 700px; /* Aumentando a altura mínima da hero */
 }
 
 .grid-overlay {
@@ -646,11 +758,23 @@ body {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; /* Reduzindo o gap para deixar os cards mais juntos */
   position: relative;
   z-index: 1;
   padding: 1rem;
+  max-width: 1200px; /* Adicionando largura máxima */
+  margin: 0 auto; /* Centralizando */
+  align-items: stretch;
+}
+
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Forçando 4 colunas em telas maiores */
+  }
 }
 
 .card {
@@ -1038,83 +1162,29 @@ body {
   opacity: 1;
 }
 
-.mobile-menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.mobile-menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--text-color);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
-}
-
-.mobile-menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
 @media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  .mobile-menu-toggle span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--text-color);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-
-  .mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
-  }
-
-  .mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-  }
-
   .mobile-menu {
     display: flex;
+  }
+
+  .mobile-menu .dropdown-menu {
+    display: none;
+  }
+
+  .mobile-menu .nav-item.active .dropdown-menu {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 
 .mobile-menu .nav-link {
-  display: block;
-  padding: 0.8rem 0;
-  margin-bottom: 0.5rem;
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
+  display: block;
+  padding: 0.75rem 0;
+  width: 100%;
   font-size: 1.1rem;
   transition: color 0.3s;
 }
@@ -1130,33 +1200,12 @@ body {
 }
 
 .mobile-menu .dropdown-icon {
-  margin-left: 0.5rem;
   transition: transform 0.3s;
+  margin-left: 0.5rem;
 }
 
 .mobile-menu .nav-item.active .dropdown-icon {
   transform: rotate(180deg);
-}
-
-.mobile-menu .dropdown-menu {
-  position: static;
-  visibility: hidden;
-  opacity: 0;
-  max-height: 0;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  box-shadow: none;
-  transform: none;
-  transition: max-height 0.3s, opacity 0.3s, visibility 0.3s;
-}
-
-.mobile-menu .nav-item.active .dropdown-menu {
-  visibility: visible;
-  opacity: 1;
-  max-height: 500px; /* Um valor grande o suficiente para mostrar todos os itens */
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .mobile-menu .dropdown-item {
@@ -1190,7 +1239,14 @@ body {
   }
 
   .mobile-menu-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
   }
 }
 
@@ -1201,7 +1257,7 @@ body {
 
   .mobile-menu,
   .mobile-menu-overlay {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1224,60 +1280,95 @@ body {
 /* Serviços Detalhados Section */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .service-category {
-  background: var(--card-background);
-  border-radius: 15px;
-  padding: 2rem;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
   border: 1px solid var(--card-border);
-  transition: all 0.3s;
+  height: 100%;
+  min-height: 350px;
+  max-height: none;
+  overflow-y: visible;
 }
 
 .service-category:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .category-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
   border-bottom: 1px solid var(--card-border);
 }
 
 .category-header i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
+  margin-right: 0.8rem;
 }
 
 .category-header h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin: 0;
   color: var(--text-color);
 }
 
 .service-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .service-list li {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.8rem;
-  color: var(--text-color);
-  font-size: 0.95rem;
+  align-items: flex-start;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .service-list li i {
   color: var(--primary-color);
-  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+/* Responsividade para a grade de serviços */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-category {
+    min-height: auto;
+    max-height: none;
+  }
+}
+
+/* Estilo específico para o card de seguros */
+.services-grid .service-category:first-child {
+  overflow-y: visible;
+  max-height: none;
 }
 
 /* Features Grid */
@@ -2773,4 +2864,65 @@ table {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
+}
+
+/* Ajuste para cards da seção de Consórcio e Financiamento */
+.cards-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  min-height: 600px;
+}
+
+.cards-container .card .features-list {
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cards-container .card .card-cta {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cards-container .card .card-details {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.cards-container .card .card-price {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 15px 0;
+  text-align: center;
+  height: 40px;
+}
+
+/* Ajuste para os elementos de lista */
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.features-list li span {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Ajustes específicos para cards com mesma altura */
+#consorcio .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  align-items: stretch;
 }
