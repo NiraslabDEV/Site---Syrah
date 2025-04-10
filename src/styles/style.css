@@ -492,9 +492,6 @@ body {
 
 /* Hero Section */
 .hero {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 4rem 1rem;
@@ -559,6 +556,96 @@ body {
   opacity: 0.8;
 }
 
+/* Novos estilos responsivos para o hero */
+@media (max-width: 992px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 600px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1rem;
+    min-height: 500px;
+    margin-top: 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-neon {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 2rem 0.8rem;
+    min-height: 450px;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+    gap: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .btn-neon {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    padding: 1.5rem 0.5rem;
+    min-height: 400px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+}
+
 [data-theme="dark"] .hero-text h1,
 [data-theme="dark"] .hero-text p {
   color: var(--text-color);
@@ -575,6 +662,20 @@ body {
   gap: 1.5rem;
 }
 
+/* Responsividade para hero-stats */
+@media (max-width: 768px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
 .stat-card {
   background: var(--card-background);
   padding: 2rem;
@@ -589,31 +690,22 @@ body {
   box-shadow: 0 0 20px var(--primary-color);
 }
 
-[data-theme="dark"] .stat-card {
-  background-color: var(--card-background);
-  border-color: var(--card-border);
+/* Responsividade para hero-content.centered */
+.hero-content.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.stat-label {
-  color: var(--text-color);
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.stat-description {
-  color: var(--text-color);
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-top: 0.5rem;
-  line-height: 1.4;
+@media (max-width: 768px) {
+  .hero-content.centered {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .btn-neon {
@@ -1220,7 +1312,7 @@ body {
   padding: 0.8rem 0;
   width: 100%;
   text-align: left;
-    font-size: 1.1rem;
+  font-size: 1.1rem;
   background: none;
   border: none;
   color: var(--text-color);
@@ -2047,7 +2139,7 @@ body {
 
 @media (max-width: 768px) {
   .page-hero h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .product-description h2,
@@ -2055,7 +2147,7 @@ body {
   .plans-section h3,
   .testimonials-section h3,
   .cta-box h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .features-grid,
