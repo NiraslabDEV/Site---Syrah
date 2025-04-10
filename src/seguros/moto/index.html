@@ -575,43 +575,138 @@
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="../../scripts/main.js"></script>
     <script>
       // Inicializa as animações AOS
       AOS.init({
         duration: 800,
-        once: true,
+        once: true
       });
 
-      // Garante que o código só será executado após o DOM estar completamente carregado
-      document.addEventListener('DOMContentLoaded', function() {
-        // Inicializa o tema
-        initTheme();
+      // Configuração do tema (claro/escuro)
+      function setupTheme() {
+        const currentTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", currentTheme);
         
-        // Setup do menu mobile
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeToggleMobile = document.getElementById("theme-toggle-mobile");
         
-        if (mobileMenuBtn) {
-          mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-        }
+        const updateIcon = (element) => {
+          if (!element) return;
+          element.innerHTML = currentTheme === "dark" 
+            ? '<i class="fas fa-sun"></i>' 
+            : '<i class="fas fa-moon"></i>';
+        };
         
-        if (mobileMenuOverlay) {
-          mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
-        }
+        updateIcon(themeToggle);
+        updateIcon(themeToggleMobile);
         
-        // Setup dos dropdowns do menu mobile
-        setupMobileDropdowns();
+        const toggleTheme = () => {
+          const newTheme = document.documentElement.getAttribute("data-theme") === "dark" 
+            ? "light" 
+            : "dark";
+          
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          
+          updateIcon(themeToggle);
+          updateIcon(themeToggleMobile);
+        };
         
-        // Inicializa FAQ se existir na página
-        if (document.querySelector('.faq-item')) {
-          // Adiciona funcionalidade às perguntas frequentes
-          document.querySelectorAll(".faq-question").forEach((question) => {
-            question.addEventListener("click", () => {
-              const faqItem = question.parentElement;
-              faqItem.classList.toggle("active");
+        if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
+        if (themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
+      }
 
-              const icon = question.querySelector("i");
+      // Configuração do menu mobile
+      function setupMobileMenu() {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay");
+        const toggleLinks = document.querySelectorAll(".mobile-menu .nav-link.dropdown-toggle");
+        const dropdownItems = document.querySelectorAll(".mobile-menu .dropdown-item");
+        const standardLinks = document.querySelectorAll(".mobile-menu .nav-link:not(.dropdown-toggle)");
+        
+        // Função para alternar o menu mobile
+        function toggleMobileMenu() {
+          mobileMenu.classList.toggle("active");
+          mobileMenuOverlay.classList.toggle("active");
+          document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "";
+        }
+        
+        // Configurar botão do menu mobile
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+        }
+        
+        // Configurar overlay do menu mobile
+        if (mobileMenuOverlay) {
+          mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+        }
+        
+        // Configurar links normais para fechar o menu ao clicar
+        standardLinks.forEach(link => {
+          link.addEventListener("click", toggleMobileMenu);
+        });
+        
+        // Configurar itens de dropdown para fechar o menu ao clicar
+        dropdownItems.forEach(item => {
+          item.addEventListener("click", toggleMobileMenu);
+        });
+        
+        // Configurar toggles de dropdown
+        toggleLinks.forEach(toggle => {
+          toggle.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            // Pegar o item pai e o ícone
+            const parentItem = this.parentElement;
+            const icon = this.querySelector(".dropdown-icon");
+            
+            // Alternar estado ativo
+            parentItem.classList.toggle("active");
+            
+            // Alterar ícone
+            if (icon) {
+              if (parentItem.classList.contains("active")) {
+                icon.classList.remove("fa-chevron-down");
+                icon.classList.add("fa-chevron-up");
+              } else {
+                icon.classList.remove("fa-chevron-up");
+                icon.classList.add("fa-chevron-down");
+              }
+            }
+            
+            // Fechar outros dropdowns
+            toggleLinks.forEach(otherToggle => {
+              if (otherToggle !== toggle) {
+                const otherParent = otherToggle.parentElement;
+                const otherIcon = otherToggle.querySelector(".dropdown-icon");
+                
+                if (otherParent.classList.contains("active")) {
+                  otherParent.classList.remove("active");
+                  
+                  if (otherIcon) {
+                    otherIcon.classList.remove("fa-chevron-up");
+                    otherIcon.classList.add("fa-chevron-down");
+                  }
+                }
+              }
+            });
+          });
+        });
+      }
+
+      // Configuração do FAQ
+      function setupFaq() {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        
+        faqQuestions.forEach(question => {
+          question.addEventListener("click", function() {
+            const faqItem = this.parentElement;
+            const icon = this.querySelector("i");
+            
+            faqItem.classList.toggle("active");
+            
+            if (icon) {
               if (faqItem.classList.contains("active")) {
                 icon.classList.remove("fa-plus");
                 icon.classList.add("fa-minus");
@@ -619,8 +714,34 @@
                 icon.classList.remove("fa-minus");
                 icon.classList.add("fa-plus");
               }
+            }
+            
+            // Fechar outros itens FAQ
+            faqQuestions.forEach(otherQuestion => {
+              if (otherQuestion !== question) {
+                const otherItem = otherQuestion.parentElement;
+                const otherIcon = otherQuestion.querySelector("i");
+                
+                if (otherItem.classList.contains("active")) {
+                  otherItem.classList.remove("active");
+                  
+                  if (otherIcon) {
+                    otherIcon.classList.remove("fa-minus");
+                    otherIcon.classList.add("fa-plus");
+                  }
+                }
+              }
             });
           });
+        });
+      }
+
+      // Inicializar tudo quando o DOM estiver pronto
+      document.addEventListener("DOMContentLoaded", function() {
+        setupTheme();
+        setupMobileMenu();
+        if (document.querySelector(".faq-item")) {
+          setupFaq();
         }
       });
     </script>
